@@ -10,27 +10,17 @@ using System.Windows.Forms;
 
 namespace ADIStudentFeedbackTracker
 {
-    public partial class LoginForm : Form
+    public partial class UserRegistrationForm : Form
     {
-        public LoginForm()
+        public UserRegistrationForm()
         {
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-
-        private void lblRegistrationLink_Click(object sender, EventArgs e)
+        private void lblLoginLink_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

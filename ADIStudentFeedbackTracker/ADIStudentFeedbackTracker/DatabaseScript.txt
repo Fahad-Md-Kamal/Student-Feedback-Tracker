@@ -10,17 +10,20 @@ CREATE TABLE [dbo].[UserRole]
 
 
 -- Users Table
-CREATE TABLE [dbo].[Users]
-(
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [UserName] VARCHAR(50) NOT NULL, 
-    [FirstName] VARCHAR(50) NULL, 
-    [LastName] VARCHAR(50) NULL, 
-    [Emaill] VARCHAR(50) NOT NULL, 
-    [Password] BIT NOT NULL, 
-    [LastLogIn] DATETIMEOFFSET NULL, 
-    [JoinDate] DATETIMEOFFSET NULL, 
-    [RoleId] INT NULL, 
-    CONSTRAINT [FK_Users_ToUserRole] FOREIGN KEY ([RoleId]) REFERENCES [UserRole]([Id])
+CREATE TABLE [dbo].[Users] (
+    [Id]        INT                NOT NULL,
+    [UserName]  VARCHAR (50)       NOT NULL,
+    [FirstName] VARCHAR (50)       NULL,
+    [LastName]  VARCHAR (50)       NULL,
+    [Emaill]    VARCHAR (50)       NOT NULL,
+    [Is_Approved]    TINYINT       NOT NULL DEFAULT 0,
+    [Password]  BIT                NOT NULL,
+    [LastLogIn] DATETIMEOFFSET (7) NULL,
+    [JoinDate]  DATETIMEOFFSET (7) NULL,
+    [RoleId]    INT                NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Users_ToUserRole] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[UserRole] ([Id])
 )
+
+
 
