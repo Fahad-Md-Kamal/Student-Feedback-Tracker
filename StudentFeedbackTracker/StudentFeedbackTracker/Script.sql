@@ -101,5 +101,5 @@ CREATE TABLE [dbo].[Feedbacks]
     [AssessementId] INT NOT NULL, 
     [FeedbackTypeId] INT NOT NULL, 
     CONSTRAINT [FK_Feedbacks_ToAssessments] FOREIGN KEY ([AssessementId]) REFERENCES [Assessments]([Id]),
-	CONSTRAINT [FK_Feedbacks_ToFeedbackType] FOREIGN KEY ([FeedbackTypeId]) REFERENCES [FeedbackType]([Id])
+	CONSTRAINT [FK_Feedbacks_ToFeedbackType] FOREIGN KEY ([FeedbackTypeId]) REFERENCES [FeedbackType] ([Id])
 )
