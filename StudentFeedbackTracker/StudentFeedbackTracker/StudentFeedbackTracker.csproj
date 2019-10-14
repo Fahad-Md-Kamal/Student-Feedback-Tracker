@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09FC25E3-E569-41A6-8BCA-B850CE19B9B8}</ProjectGuid>
+    <ProjectGuid>{535BCFCF-4C8C-42A6-A080-0F92412397DF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ADIStudentFeedbackTracker</RootNamespace>
-    <AssemblyName>ADIStudentFeedbackTracker</AssemblyName>
+    <RootNamespace>StudentFeedbackTracker</RootNamespace>
+    <AssemblyName>StudentFeedbackTracker</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -61,31 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserInformationForm.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInformationForm.Designer.cs">
-      <DependentUpon>UserInformationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserLogin.Designer.cs">
-      <DependentUpon>UserLogin.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserRegistrationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserRegistrationForm.Designer.cs">
-      <DependentUpon>UserRegistrationForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="UserInformationForm.resx">
-      <DependentUpon>UserInformationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserLogin.resx">
-      <DependentUpon>UserLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,9 +81,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserRegistrationForm.resx">
-      <DependentUpon>UserRegistrationForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,14 +95,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ADIStudentFeedbackTracker.mdf">
+    <Content Include="DbFeedbackTracker.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ADIStudentFeedbackTracker_log.ldf">
+    <Content Include="DbFeedbackTracker_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ADIStudentFeedbackTracker.mdf</DependentUpon>
+      <DependentUpon>DbFeedbackTracker.mdf</DependentUpon>
     </Content>
-    <Content Include="DatabaseScript.txt" />
+    <Content Include="SqlScript.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">

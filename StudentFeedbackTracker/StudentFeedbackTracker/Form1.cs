@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ADIStudentFeedbackTracker
+namespace StudentFeedbackTracker
 {
-    public partial class UserInformationForm : Form
+    public partial class Form1 : Form
     {
-        public UserInformationForm()
+        public Form1()
         {
             InitializeComponent();
         }
