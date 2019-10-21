@@ -21,9 +21,6 @@ namespace StudentFeedbackTracker.Forms
 
         private void UserRegister_Load(object sender, EventArgs e)
         {
-            //var Roles = db.UserRoles.Select(d =>
-            //new { RoleId = d.Id, Role = d.uRole }).ToList();  
-
             cmbUserRole.DataSource = db.UserRoles.ToList();
             cmbUserRole.DisplayMember = "uRole";
             cmbUserRole.ValueMember = "Id";
