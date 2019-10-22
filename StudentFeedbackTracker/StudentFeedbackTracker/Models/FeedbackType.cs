@@ -10,6 +10,13 @@ namespace StudnetFeedbackTracker.Models
     {
         public int Id { get; set; }
         public string Type { get; set; }
-        // Summetive, Recommandation, Comments
+        
+
+        void AddType() { }
+        void UpdateType() { }
+        void DeleteType() { }
+        // Summetive, 
+        // Recommandation, 
+        // Comments
     }
 }

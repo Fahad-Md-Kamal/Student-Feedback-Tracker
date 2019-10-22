@@ -10,5 +10,10 @@ namespace StudnetFeedbackTracker.Models
     {
         public int Id { get; set; }
         public string AssesName { get; set; }
+
+
+        void AddType() { }
+        void UpdateType() { }
+        void DeleteType() { }
     }
 }

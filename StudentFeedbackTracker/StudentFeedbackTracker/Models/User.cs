@@ -15,11 +15,17 @@ namespace StudnetFeedbackTracker.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string JoinDate { get; set; }
-        public UserType UserType { get; set; }
 
+        public virtual UserType UserType { get; set; }
 
+        public virtual IList<Assessment> Assessments { get; set; }
+        //public virtual IList<StaffsCourse> StaffsCourses { get; set; }
+        //public virtual IList<StudentsCourse> StudentsCourses { get; set; }
 
         public void UpdateUserInfo() { }
+        void AddUser() { }
+        void UpdateUser() { }
+        void DeleteUser() { }
 
     }
 }

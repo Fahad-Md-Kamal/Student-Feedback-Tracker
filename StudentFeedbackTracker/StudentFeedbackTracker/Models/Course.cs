@@ -10,10 +10,16 @@ namespace StudnetFeedbackTracker.Models
     {
         public int Id { get; set; }
         public string CourseName { get; set; }
-        public List<Subject> CourseSubjects { get; set; }
-        public List<StudentUser> CourseSutdents { get; set; }
+
+        public virtual ICollection<CouseSubject> Subjects { get; set; }
+        public virtual ICollection<StudentsCourse> StudentsCourses { get; set; }
+        public virtual ICollection<StaffsCourse> StaffsCourses { get; set; }
+
+
+        void AddCourse() { }
+        void UpdateCourse() { }
+        void DeleteCourse() { }
 
         void AddSubjectToTheCourse() { }
-        // StudentList
     }
 }

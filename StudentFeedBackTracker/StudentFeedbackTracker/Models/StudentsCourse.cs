@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace StudnetFeedbackTracker.Models
 {
-    public class BatchStudent
+    public class StudentsCourse
     {
         public int SId { get; set; }
-        public UserBase Student { get; set; }
+        public User Student { get; set; }
 
-        public int BId { get; set; }
-        public Batch Batch { get; set; }
+        public int CId { get; set; }
+        public Course Course { get; set; }
     }
 }
