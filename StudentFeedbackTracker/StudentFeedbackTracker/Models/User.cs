@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudnetFeedbackTracker.Models
 {
-    public class User
+    public abstract class User
     {
         [Key]
         public int Id { get; set; }
@@ -28,11 +28,8 @@ namespace StudnetFeedbackTracker.Models
         public string Password { get; set; }
         public string JoinDate { get; set; }
 
-        public virtual UserType UserType { get; set; }
+        //public virtual UserType UserType { get; set; }
 
-        public virtual IList<Assessment> Assessments { get; set; }
-        public virtual IList<Course> StaffsCourses { get; set; }
-        public virtual IList<Course> StudentsCourses { get; set; }
 
         public void UpdateUserInfo() { }
         void AddUser() { }

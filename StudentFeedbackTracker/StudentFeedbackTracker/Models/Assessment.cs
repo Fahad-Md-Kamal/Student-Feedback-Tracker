@@ -19,10 +19,9 @@ namespace StudnetFeedbackTracker.Models
         public int Score { get; set; }
 
         public virtual AssessmentType AssessmentType { get; set; }
-        //public virtual Subject Subeject { get; set; }
-        //public virtual User Staff { get; set; }
 
-        public virtual IList<User> Students { get; set; }
+        public virtual IList<Student> Students { get; set; }
+        public virtual Staff Staff { get; set; }
 
         public void AddAssessement() { } // Admin, Staff
         public void UpdateAssessement() { } // Admi, Staff

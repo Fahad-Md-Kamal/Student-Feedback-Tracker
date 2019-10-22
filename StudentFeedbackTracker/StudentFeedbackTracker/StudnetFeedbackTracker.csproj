@@ -72,13 +72,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AppContext.cs" />
+    <Compile Include="Forms\frmAssessmentManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\frmAssessmentManage.Designer.cs">
+      <DependentUpon>frmAssessmentManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AppContext.cs" />
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModule.Designer.cs">
+      <DependentUpon>frmModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserSignup.Designer.cs">
+      <DependentUpon>frmUserSignup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201910221404408_DatabaseCreation.cs" />
     <Compile Include="Migrations\201910221404408_DatabaseCreation.designer.cs">
       <DependentUpon>201910221404408_DatabaseCreation.cs</DependentUpon>
@@ -91,11 +109,25 @@
     <Compile Include="Models\PersonalNote.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Models\FeedbackType.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserType.cs" />
     <Compile Include="Models\WordCloud.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAssessmentManage.resx">
+      <DependentUpon>frmAssessmentManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModule.resx">
+      <DependentUpon>frmModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserSignup.resx">
+      <DependentUpon>frmUserSignup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910221404408_DatabaseCreation.resx">
       <DependentUpon>201910221404408_DatabaseCreation.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,9 +162,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\User\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
