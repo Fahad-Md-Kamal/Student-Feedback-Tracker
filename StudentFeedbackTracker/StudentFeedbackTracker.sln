@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentFeedbackTracker", "StudentFeedbackTracker\StudentFeedbackTracker.csproj", "{535BCFCF-4C8C-42A6-A080-0F92412397DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudnetFeedbackTracker", "FrmDashBoard\StudnetFeedbackTracker.csproj", "{E03EBD66-7EE1-4B54-8873-B319B5FCC32D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{535BCFCF-4C8C-42A6-A080-0F92412397DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{535BCFCF-4C8C-42A6-A080-0F92412397DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{535BCFCF-4C8C-42A6-A080-0F92412397DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{535BCFCF-4C8C-42A6-A080-0F92412397DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03EBD66-7EE1-4B54-8873-B319B5FCC32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03EBD66-7EE1-4B54-8873-B319B5FCC32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03EBD66-7EE1-4B54-8873-B319B5FCC32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03EBD66-7EE1-4B54-8873-B319B5FCC32D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {13511E75-6CBF-46FE-89B0-62D6B26E4A02}
+		SolutionGuid = {4246BB5C-1A01-4D1E-BB62-57155B24A3F9}
 	EndGlobalSection
 EndGlobal
