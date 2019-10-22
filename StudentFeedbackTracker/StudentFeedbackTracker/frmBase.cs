@@ -1,5 +1,6 @@
-﻿using StudentFeedbackTracker.Forms;
+﻿using StudentFeedbackTracker.Controls;
 using StudentFeedbackTracker.Helper;
+using StudentFeedbackTracker.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,13 +18,29 @@ namespace StudentFeedbackTracker
         public frmBase()
         {
             InitializeComponent();
-            pnlBtn.Visible = false;
-            
         }
 
         private void frmBase_Load(object sender, EventArgs e)
         {
-            PanelformLoader.ServingForm(new frmLogin(), pnlParent);
+            PanelformLoader.ServingForm(new frmStudentsBtns(), pnlbtn);
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void registerUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void addNewUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelformLoader.ServingForm(new frmRegistrationForm(), pnlService);
+        }
+
+        private void blocUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelformLoader.ServingForm(new frmCreateRole(), pnlService);
         }
     }
 }

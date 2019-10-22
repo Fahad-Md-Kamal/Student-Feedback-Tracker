@@ -28,196 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblheader = new System.Windows.Forms.Label();
-            this.pbxUser = new System.Windows.Forms.PictureBox();
-            this.pnlBtn = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.pnlParent = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
-            this.pnlBtn.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blocUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assessmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlbtn = new System.Windows.Forms.Panel();
+            this.pnlService = new System.Windows.Forms.Panel();
+            this.createCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblheader
-            // 
-            this.lblheader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(158)))), ((int)(((byte)(138)))));
-            this.lblheader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblheader.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblheader.ForeColor = System.Drawing.Color.Ivory;
-            this.lblheader.Location = new System.Drawing.Point(0, 0);
-            this.lblheader.Name = "lblheader";
-            this.lblheader.Size = new System.Drawing.Size(1184, 90);
-            this.lblheader.TabIndex = 0;
-            this.lblheader.Text = "                           Student Feedback Tracker";
-            this.lblheader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbxUser
-            // 
-            this.pbxUser.Location = new System.Drawing.Point(88, 6);
-            this.pbxUser.Name = "pbxUser";
-            this.pbxUser.Size = new System.Drawing.Size(100, 78);
-            this.pbxUser.TabIndex = 1;
-            this.pbxUser.TabStop = false;
-            // 
-            // pnlBtn
-            // 
-            this.pnlBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.pnlBtn.Controls.Add(this.button4);
-            this.pnlBtn.Controls.Add(this.button1);
-            this.pnlBtn.Controls.Add(this.button3);
-            this.pnlBtn.Controls.Add(this.button2);
-            this.pnlBtn.Controls.Add(this.btnUser);
-            this.pnlBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlBtn.Location = new System.Drawing.Point(0, 90);
-            this.pnlBtn.Name = "pnlBtn";
-            this.pnlBtn.Size = new System.Drawing.Size(252, 618);
-            this.pnlBtn.TabIndex = 2;
             // 
             // lblUsername
             // 
             this.lblUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
+            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(200, 9);
+            this.lblUsername.Location = new System.Drawing.Point(0, 27);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(203, 30);
+            this.lblUsername.Size = new System.Drawing.Size(1184, 39);
             this.lblUsername.TabIndex = 3;
-            this.lblUsername.Text = "User Name";
+            this.lblUsername.Text = "Student Feedback Tracker";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblRole
+            // menuStrip1
             // 
-            this.lblRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(158)))), ((int)(((byte)(132)))));
-            this.lblRole.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.ForeColor = System.Drawing.Color.White;
-            this.lblRole.Location = new System.Drawing.Point(201, 52);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(203, 19);
-            this.lblRole.TabIndex = 4;
-            this.lblRole.Text = "Administrator";
-            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usersToolStripMenuItem,
+            this.coursesToolStripMenuItem,
+            this.subjectsToolStripMenuItem,
+            this.assessmentsToolStripMenuItem,
+            this.feedbackToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1184, 27);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // pnlParent
+            // usersToolStripMenuItem
             // 
-            this.pnlParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlParent.Location = new System.Drawing.Point(252, 90);
-            this.pnlParent.Name = "pnlParent";
-            this.pnlParent.Size = new System.Drawing.Size(932, 618);
-            this.pnlParent.TabIndex = 0;
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewUsersToolStripMenuItem,
+            this.modifyUsersToolStripMenuItem,
+            this.blocUserToolStripMenuItem});
+            this.usersToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(66, 23);
+            this.usersToolStripMenuItem.Text = "Users";
             // 
-            // btnUser
+            // addNewUsersToolStripMenuItem
             // 
-            this.btnUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Location = new System.Drawing.Point(13, 96);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(221, 46);
-            this.btnUser.TabIndex = 0;
-            this.btnUser.Text = "Profile";
-            this.btnUser.UseVisualStyleBackColor = false;
+            this.addNewUsersToolStripMenuItem.Name = "addNewUsersToolStripMenuItem";
+            this.addNewUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewUsersToolStripMenuItem.Text = "Add new Users";
+            this.addNewUsersToolStripMenuItem.Click += new System.EventHandler(this.addNewUsersToolStripMenuItem_Click);
             // 
-            // button2
+            // modifyUsersToolStripMenuItem
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(13, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Subjects";
-            this.button2.UseVisualStyleBackColor = false;
+            this.modifyUsersToolStripMenuItem.Name = "modifyUsersToolStripMenuItem";
+            this.modifyUsersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyUsersToolStripMenuItem.Text = "Modify Users";
             // 
-            // button3
+            // blocUserToolStripMenuItem
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(13, 260);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Courses";
-            this.button3.UseVisualStyleBackColor = false;
+            this.blocUserToolStripMenuItem.Name = "blocUserToolStripMenuItem";
+            this.blocUserToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
+            this.blocUserToolStripMenuItem.Text = "Create Role";
+            this.blocUserToolStripMenuItem.Click += new System.EventHandler(this.blocUserToolStripMenuItem_Click);
             // 
-            // button1
+            // coursesToolStripMenuItem
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 342);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 46);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Assessments";
-            this.button1.UseVisualStyleBackColor = false;
+            this.coursesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createCourseToolStripMenuItem});
+            this.coursesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(86, 23);
+            this.coursesToolStripMenuItem.Text = "Courses";
             // 
-            // button4
+            // subjectsToolStripMenuItem
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(13, 424);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 46);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Feedbacks";
-            this.button4.UseVisualStyleBackColor = false;
+            this.subjectsToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subjectsToolStripMenuItem.Name = "subjectsToolStripMenuItem";
+            this.subjectsToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
+            this.subjectsToolStripMenuItem.Text = "Subjects";
+            // 
+            // assessmentsToolStripMenuItem
+            // 
+            this.assessmentsToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assessmentsToolStripMenuItem.Name = "assessmentsToolStripMenuItem";
+            this.assessmentsToolStripMenuItem.Size = new System.Drawing.Size(124, 23);
+            this.assessmentsToolStripMenuItem.Text = "Assessments";
+            // 
+            // feedbackToolStripMenuItem
+            // 
+            this.feedbackToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(96, 23);
+            this.feedbackToolStripMenuItem.Text = "Feedback";
+            // 
+            // pnlbtn
+            // 
+            this.pnlbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.pnlbtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlbtn.Location = new System.Drawing.Point(0, 66);
+            this.pnlbtn.Name = "pnlbtn";
+            this.pnlbtn.Size = new System.Drawing.Size(242, 642);
+            this.pnlbtn.TabIndex = 6;
+            // 
+            // pnlService
+            // 
+            this.pnlService.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlService.Location = new System.Drawing.Point(242, 66);
+            this.pnlService.Name = "pnlService";
+            this.pnlService.Size = new System.Drawing.Size(942, 642);
+            this.pnlService.TabIndex = 7;
+            // 
+            // createCourseToolStripMenuItem
+            // 
+            this.createCourseToolStripMenuItem.Name = "createCourseToolStripMenuItem";
+            this.createCourseToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
+            this.createCourseToolStripMenuItem.Text = "Create Course";
             // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 708);
-            this.Controls.Add(this.pnlParent);
-            this.Controls.Add(this.lblRole);
+            this.Controls.Add(this.pnlService);
+            this.Controls.Add(this.pnlbtn);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.pnlBtn);
-            this.Controls.Add(this.pbxUser);
-            this.Controls.Add(this.lblheader);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "frmBase";
             this.Text = "frmBase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBase_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
-            this.pnlBtn.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblheader;
-        private System.Windows.Forms.PictureBox pbxUser;
-        private System.Windows.Forms.Panel pnlBtn;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.Panel pnlParent;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifyUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coursesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assessmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem feedbackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blocUserToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlbtn;
+        private System.Windows.Forms.Panel pnlService;
+        private System.Windows.Forms.ToolStripMenuItem createCourseToolStripMenuItem;
     }
 }
