@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,10 @@ namespace StudnetFeedbackTracker.Models
 {
     public class Assessment
     {
+        [Key]
         public int Id { get; set; }
+
+        [StringLength(250)]
         public string AssessmentDetail { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime SubmissionDate { get; set; }

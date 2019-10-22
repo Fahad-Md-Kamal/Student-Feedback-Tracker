@@ -79,23 +79,26 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="AppContext.cs" />
+    <Compile Include="Migrations\201910221404408_DatabaseCreation.cs" />
+    <Compile Include="Migrations\201910221404408_DatabaseCreation.designer.cs">
+      <DependentUpon>201910221404408_DatabaseCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Assessment.cs" />
-    <Compile Include="Models\AssessmentStudent.cs" />
     <Compile Include="Models\AssessmentType.cs" />
     <Compile Include="Models\Course.cs" />
-    <Compile Include="Models\CouseSubject.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\PersonalNote.cs" />
-    <Compile Include="Models\StaffsCourse.cs" />
-    <Compile Include="Models\StudentsCourse.cs" />
-    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Module.cs" />
     <Compile Include="Models\FeedbackType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserType.cs" />
     <Compile Include="Models\WordCloud.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentFeedbackTracker.cs" />
+    <EmbeddedResource Include="Migrations\201910221404408_DatabaseCreation.resx">
+      <DependentUpon>201910221404408_DatabaseCreation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -129,6 +132,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
