@@ -28,36 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlForm = new System.Windows.Forms.Panel();
             this.gbx = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtRoleName = new System.Windows.Forms.TextBox();
             this.lblRoleName = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.gbx.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlForm
             // 
-            this.panel1.Controls.Add(this.gbx);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 602);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(463, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 602);
-            this.panel2.TabIndex = 1;
+            this.pnlForm.BackColor = System.Drawing.Color.White;
+            this.pnlForm.Controls.Add(this.gbx);
+            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlForm.Location = new System.Drawing.Point(0, 0);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(463, 602);
+            this.pnlForm.TabIndex = 0;
             // 
             // gbx
             // 
@@ -104,6 +96,15 @@
             this.lblRoleName.Text = "Role Name:";
             this.lblRoleName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgv);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(463, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 602);
+            this.panel2.TabIndex = 1;
+            // 
             // dgv
             // 
             this.dgv.BackgroundColor = System.Drawing.Color.White;
@@ -120,14 +121,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 602);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCreateRole";
             this.Text = "frmCreateRole";
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.pnlForm.ResumeLayout(false);
             this.gbx.ResumeLayout(false);
             this.gbx.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
@@ -135,7 +136,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlForm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gbx;
         private System.Windows.Forms.Button btnSubmit;

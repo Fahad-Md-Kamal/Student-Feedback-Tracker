@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentFeedbackTracker.Views
+namespace StudentFeedbackTracker.Views.UserManage
 {
     public partial class frmRegistrationForm : Form
     {
@@ -21,11 +21,11 @@ namespace StudentFeedbackTracker.Views
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
-            LoadList();
 
             cmbUserType.DataSource = db.UserRoles.ToList();
             cmbUserType.DisplayMember = "uRole";
             cmbUserType.ValueMember = "Id";
+            LoadList();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentFeedbackTracker.Views
+namespace StudentFeedbackTracker.Views.UserManage
 {
     public partial class frmCreateRole : Form
     {
