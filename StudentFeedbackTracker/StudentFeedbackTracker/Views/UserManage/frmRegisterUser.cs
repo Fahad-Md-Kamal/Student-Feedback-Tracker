@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace StudentFeedbackTracker.Views.UserManage
 {
-    public partial class frmRegistrationForm : Form
+    public partial class frmRegisterUser : Form
     {
         Database1Entities1 db = new Database1Entities1();
-        public frmRegistrationForm()
+        public frmRegisterUser()
         {
             InitializeComponent();
         }

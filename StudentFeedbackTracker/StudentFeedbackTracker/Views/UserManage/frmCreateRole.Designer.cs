@@ -1,4 +1,4 @@
-﻿namespace StudentFeedbackTracker.Views
+﻿namespace StudentFeedbackTracker.Views.UserManage
 {
     partial class frmCreateRole
     {

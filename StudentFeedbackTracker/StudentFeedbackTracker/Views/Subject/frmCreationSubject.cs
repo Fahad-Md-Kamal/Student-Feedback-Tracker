@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentFeedbackTracker.Views.Subject
 {
-    public partial class frmSubject : Form
+    public partial class frmCreationSubject : Form
     {
-        public frmSubject()
+        public frmCreationSubject()
         {
             InitializeComponent();
         }

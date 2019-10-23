@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentFeedbackTracker.Views.Assessments
 {
-    public partial class frmCreateAssessments : Form
+    public partial class frmAssessmentDetail : Form
     {
-        public frmCreateAssessments()
+        public frmAssessmentDetail()
         {
             InitializeComponent();
         }

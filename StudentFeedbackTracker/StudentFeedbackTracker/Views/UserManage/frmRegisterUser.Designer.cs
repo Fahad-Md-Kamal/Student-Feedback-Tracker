@@ -1,6 +1,6 @@
 ﻿namespace StudentFeedbackTracker.Views.UserManage
 {
-    partial class frmRegistrationForm
+    partial class frmRegisterUser
     {
         /// <summary>
         /// Required designer variable.

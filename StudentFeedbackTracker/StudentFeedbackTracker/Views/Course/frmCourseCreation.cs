@@ -16,5 +16,35 @@ namespace StudentFeedbackTracker.Views.Course
         {
             InitializeComponent();
         }
+
+        private void pnlForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gbx_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCourseName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRoleName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
