@@ -21,7 +21,7 @@ namespace StudentFeedbackTracker
         }
     
         public int Id { get; set; }
-        public string FeedbackType1 { get; set; }
+        public string Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Feedback> Feedbacks { get; set; }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace StudentFeedbackTracker.Helper
 {
-    public class PanelformLoader
+    public class FormLoader
     {
         public static void ServingForm(Form formInstance, Panel panel)
         {

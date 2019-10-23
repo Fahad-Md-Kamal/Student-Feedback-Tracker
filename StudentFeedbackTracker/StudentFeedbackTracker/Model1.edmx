@@ -21,7 +21,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AssessmentType" Type="varbinary" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="varbinary" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Courses">
           <Key>
@@ -55,7 +55,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FeedbackType" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Subjects">
           <Key>
@@ -286,7 +286,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AssessmentType1" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+          <Property Name="Type" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
           <NavigationProperty Name="Assessments" Relationship="Self.FK_Assessments_ToAssessmentType" FromRole="AssessmentType" ToRole="Assessments" />
         </EntityType>
         <EntityType Name="Cours">
@@ -315,7 +315,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FeedbackType1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Feedbacks" Relationship="Self.FK_Feedbacks_ToFeedbackType" FromRole="FeedbackType" ToRole="Feedbacks" />
         </EntityType>
         <EntityType Name="Subject">
@@ -420,7 +420,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
           <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
           <End Role="Users" Type="Self.User" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="Database1Entities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Database1Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Assessments" EntityType="Self.Assessment" />
           <EntitySet Name="AssessmentTypes" EntityType="Self.AssessmentType" />
           <EntitySet Name="Courses" EntityType="Self.Cours" />
@@ -463,7 +463,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities1">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities3">
           <EntitySetMapping Name="Assessments">
             <EntityTypeMapping TypeName="Database1Model.Assessment">
               <MappingFragment StoreEntitySet="Assessments">
@@ -480,7 +480,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
             <EntityTypeMapping TypeName="Database1Model.AssessmentType">
               <MappingFragment StoreEntitySet="AssessmentType">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="AssessmentType1" ColumnName="AssessmentType" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -507,7 +507,7 @@ warning 6002: The table/view 'E:\ADI\STUDENT-FEEDBACK-TRACKER\STUDENTFEEDBACKTRA
             <EntityTypeMapping TypeName="Database1Model.FeedbackType">
               <MappingFragment StoreEntitySet="FeedbackType">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FeedbackType1" ColumnName="FeedbackType" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

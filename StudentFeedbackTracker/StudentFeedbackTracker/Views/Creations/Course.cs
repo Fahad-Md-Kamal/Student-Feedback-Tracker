@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentFeedbackTracker.Controls
+namespace StudentFeedbackTracker.Views.Creations
 {
-    public partial class frmStudentsBtns : Form
+    public partial class Course : Form
     {
-        public frmStudentsBtns()
+        public Course()
         {
             InitializeComponent();
         }

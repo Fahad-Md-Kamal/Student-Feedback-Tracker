@@ -66,7 +66,7 @@ CREATE TABLE [dbo].[CourseSubejcts]
 CREATE TABLE [dbo].[AssessmentType]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
-    [AssessmentType] VARBINARY(50) NOT NULL
+    [Type] VARBINARY(50) NOT NULL
 )
 
 
@@ -84,11 +84,11 @@ CREATE TABLE [dbo].[Assessments]
 )
 
 -- Feedback Type Table
-CREATE TABLE [dbo].[FeedbackType]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY (1,1), 
-    [FeedbackType] VARCHAR(50) NOT NULL,
-)
+CREATE TABLE [dbo].[FeedbackType] (
+    [Id]           INT          IDENTITY (1, 1) NOT NULL,
+    [Type] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
 
 
 

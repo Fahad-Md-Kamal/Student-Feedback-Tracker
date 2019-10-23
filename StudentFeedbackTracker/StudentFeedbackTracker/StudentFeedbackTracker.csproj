@@ -98,7 +98,7 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\PanelformLoader.cs" />
+    <Compile Include="Helpers\FormLoader.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -125,17 +125,47 @@
     <Compile Include="UserRole.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAssessment.Designer.cs">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmAssessmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmAssessmentType.Designer.cs">
+      <DependentUpon>frmAssessmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmCreateRole.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmCreateRole.Designer.cs">
       <DependentUpon>frmCreateRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmFeedback.Designer.cs">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmRegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmRegistrationForm.Designer.cs">
       <DependentUpon>frmRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmSubjects.Designer.cs">
+      <DependentUpon>frmSubjects.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controls\frmStudentsBtns.resx">
       <DependentUpon>frmStudentsBtns.cs</DependentUpon>
@@ -152,11 +182,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmAssessment.resx">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmAssessmentType.resx">
+      <DependentUpon>frmAssessmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmCreateRole.resx">
       <DependentUpon>frmCreateRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmFeedback.resx">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmRegistrationForm.resx">
       <DependentUpon>frmRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmSubjects.resx">
+      <DependentUpon>frmSubjects.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

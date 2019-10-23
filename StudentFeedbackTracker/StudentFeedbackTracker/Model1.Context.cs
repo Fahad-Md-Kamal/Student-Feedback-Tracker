@@ -13,10 +13,10 @@ namespace StudentFeedbackTracker
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database1Entities1 : DbContext
+    public partial class Database1Entities3 : DbContext
     {
-        public Database1Entities1()
-            : base("name=Database1Entities1")
+        public Database1Entities3()
+            : base("name=Database1Entities3")
         {
         }
     
