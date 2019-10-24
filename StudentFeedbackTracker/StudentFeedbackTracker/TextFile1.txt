@@ -4,7 +4,6 @@
     [tName] VARCHAR(50) NULL
 );
 
-
 INSERT INTO UserType VALUES ('Admin')
 INSERT INTO UserType VALUES ('Student')
 INSERT INTO UserType VALUES ('Staff')
@@ -26,9 +25,6 @@ CREATE TABLE [dbo].[Course]
 
 INSERT INTO Course VALUES('L4DC')
 INSERT INTO Course VALUES('L5DC')
-
-
-
 
 CREATE TABLE [dbo].[Subject]
 (
@@ -72,7 +68,6 @@ INSERT INTO Student VALUES(
     1
 );
 
-
 CREATE TABLE [dbo].[Staff]
 (
     [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
@@ -94,7 +89,6 @@ CREATE TABLE [dbo].[AssessmentType]
 	
 );
 
-
 CREATE TABLE [dbo].[SubjectAssessment]
 (
     [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
@@ -103,25 +97,6 @@ CREATE TABLE [dbo].[SubjectAssessment]
     CONSTRAINT [FK_tblAssessmentType_ToTable] FOREIGN KEY ([asId] ) REFERENCES [AssessmentType]([Id] ),
     CONSTRAINT [FK_tblSubject_ToTable] FOREIGN KEY ([sId]) REFERENCES [dbo].[Subject] ([Id])
 );
---CREATE TABLE [dbo].[SubjectAssessment] (
---    [Id]   INT IDENTITY (1, 1) NOT NULL,
---    [asId] INT NULL,
- --   [sId]  INT NULL,
- --   PRIMARY KEY CLUSTERED ([Id] ASC), 
- --   CONSTRAINT [FK_SubjectAssessment_ToAssess] FOREIGN KEY ([asId]) REFERENCES [AssessmentType]([Id]), 
- --   CONSTRAINT [FK_SubjectAssessment_ToSubject] FOREIGN KEY ([sId]) REFERENCES [Subject]([Id]),
-);
-
-
-
-
-
-
-
-
-
-
-
 
 CREATE TABLE [dbo].[StudentCourse]
 (
@@ -162,7 +137,6 @@ CREATE TABLE [dbo].[FeedbackType]
   
 );
 
-
 CREATE TABLE [dbo].[Feedback]
 (
     [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
@@ -183,25 +157,6 @@ CREATE TABLE [dbo].[Note]
     CONSTRAINT [tblFeedback_totable] FOREIGN KEY ([fbId] ) REFERENCES [Feedback] ([Id]),
     CONSTRAINT [FK_tblUser_ToTable2] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id])
 );
-
-
-
-UserType
-User
-Course
-Subject
-Student
-Staff
-AssessmentType
-SubjectAssessment
-StudentCourse
-Grade
-Assessment
-FeedbackType
-Feedback
-Note
-WordCloud
-
 
 CREATE TABLE [dbo].[WordCloud]
 (

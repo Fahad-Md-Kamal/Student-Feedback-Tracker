@@ -34,7 +34,6 @@
             this.subjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assessmentSubjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assessmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +45,6 @@
             this.allStaffInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allUserTypeInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allAssessmentInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allAssementTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeUserTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +53,9 @@
             this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allUserRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assessmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allAssessmentTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subjectAssessmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allAssessmentSubjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,8 +80,7 @@
             this.registerUserToolStripMenuItem,
             this.registerStaffToolStripMenuItem,
             this.assessmentTypeToolStripMenuItem,
-            this.assessmentToolStripMenuItem,
-            this.assessmentSubjectToolStripMenuItem,
+            this.subjectAssessmentToolStripMenuItem,
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -92,54 +90,47 @@
             // courseToolStripMenuItem
             // 
             this.courseToolStripMenuItem.Name = "courseToolStripMenuItem";
-            this.courseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.courseToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.courseToolStripMenuItem.Text = "Course";
             this.courseToolStripMenuItem.Click += new System.EventHandler(this.courseToolStripMenuItem_Click);
             // 
             // subjectToolStripMenuItem
             // 
             this.subjectToolStripMenuItem.Name = "subjectToolStripMenuItem";
-            this.subjectToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.subjectToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.subjectToolStripMenuItem.Text = "Subject";
             this.subjectToolStripMenuItem.Click += new System.EventHandler(this.subjectToolStripMenuItem_Click);
             // 
             // registerUserToolStripMenuItem
             // 
             this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
-            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.registerUserToolStripMenuItem.Text = "Register Student";
             this.registerUserToolStripMenuItem.Click += new System.EventHandler(this.registerUserToolStripMenuItem_Click);
             // 
             // registerStaffToolStripMenuItem
             // 
             this.registerStaffToolStripMenuItem.Name = "registerStaffToolStripMenuItem";
-            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
-            // 
-            // assessmentSubjectToolStripMenuItem
-            // 
-            this.assessmentSubjectToolStripMenuItem.Name = "assessmentSubjectToolStripMenuItem";
-            this.assessmentSubjectToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.assessmentSubjectToolStripMenuItem.Text = "Assessment Subject";
-            this.assessmentSubjectToolStripMenuItem.Click += new System.EventHandler(this.assessmentSubjectToolStripMenuItem_Click);
             // 
             // assessmentTypeToolStripMenuItem
             // 
             this.assessmentTypeToolStripMenuItem.Name = "assessmentTypeToolStripMenuItem";
-            this.assessmentTypeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.assessmentTypeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.assessmentTypeToolStripMenuItem.Text = "Assessment Type";
             this.assessmentTypeToolStripMenuItem.Click += new System.EventHandler(this.assessmentTypeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(161, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -149,12 +140,12 @@
             this.allCourseToolStripMenuItem,
             this.allSubjectToolStripMenuItem,
             this.allUserInformationToolStripMenuItem,
-            this.allUserRolesToolStripMenuItem,
             this.allStudentInformationToolStripMenuItem,
             this.allStaffInformationToolStripMenuItem,
             this.allUserTypeInformationToolStripMenuItem,
             this.allAssessmentInformationToolStripMenuItem,
-            this.allAssementTypeToolStripMenuItem});
+            this.allAssessmentTypesToolStripMenuItem,
+            this.allAssessmentSubjectToolStripMenuItem});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.listToolStripMenuItem.Text = "&List";
@@ -207,13 +198,6 @@
             this.allAssessmentInformationToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.allAssessmentInformationToolStripMenuItem.Text = "All Assessment Information";
             this.allAssessmentInformationToolStripMenuItem.Click += new System.EventHandler(this.allAssessmentInformationToolStripMenuItem_Click);
-            // 
-            // allAssementTypeToolStripMenuItem
-            // 
-            this.allAssementTypeToolStripMenuItem.Name = "allAssementTypeToolStripMenuItem";
-            this.allAssementTypeToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.allAssementTypeToolStripMenuItem.Text = "All Assement Type";
-            this.allAssementTypeToolStripMenuItem.Click += new System.EventHandler(this.allAssementTypeToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -277,19 +261,26 @@
             this.closeAllToolStripMenuItem.Text = "Close All";
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.closeAllToolStripMenuItem_Click);
             // 
-            // allUserRolesToolStripMenuItem
+            // allAssessmentTypesToolStripMenuItem
             // 
-            this.allUserRolesToolStripMenuItem.Name = "allUserRolesToolStripMenuItem";
-            this.allUserRolesToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.allUserRolesToolStripMenuItem.Text = "All User Roles";
-            this.allUserRolesToolStripMenuItem.Click += new System.EventHandler(this.allUserRolesToolStripMenuItem_Click);
+            this.allAssessmentTypesToolStripMenuItem.Name = "allAssessmentTypesToolStripMenuItem";
+            this.allAssessmentTypesToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.allAssessmentTypesToolStripMenuItem.Text = "All Assessment Types";
+            this.allAssessmentTypesToolStripMenuItem.Click += new System.EventHandler(this.allAssessmentTypesToolStripMenuItem_Click);
             // 
-            // assessmentToolStripMenuItem
+            // subjectAssessmentToolStripMenuItem
             // 
-            this.assessmentToolStripMenuItem.Name = "assessmentToolStripMenuItem";
-            this.assessmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.assessmentToolStripMenuItem.Text = "Assessment";
-            this.assessmentToolStripMenuItem.Click += new System.EventHandler(this.assessmentToolStripMenuItem_Click);
+            this.subjectAssessmentToolStripMenuItem.Name = "subjectAssessmentToolStripMenuItem";
+            this.subjectAssessmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subjectAssessmentToolStripMenuItem.Text = "Subject Assessment";
+            this.subjectAssessmentToolStripMenuItem.Click += new System.EventHandler(this.subjectAssessmentToolStripMenuItem_Click);
+            // 
+            // allAssessmentSubjectToolStripMenuItem
+            // 
+            this.allAssessmentSubjectToolStripMenuItem.Name = "allAssessmentSubjectToolStripMenuItem";
+            this.allAssessmentSubjectToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.allAssessmentSubjectToolStripMenuItem.Text = "All Assessment Subject";
+            this.allAssessmentSubjectToolStripMenuItem.Click += new System.EventHandler(this.allAssessmentSubjectToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -337,10 +328,9 @@
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileVerticalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assessmentSubjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allAssementTypeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allUserRolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assessmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allAssessmentTypesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subjectAssessmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allAssessmentSubjectToolStripMenuItem;
     }
 }
 

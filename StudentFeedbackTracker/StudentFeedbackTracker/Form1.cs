@@ -152,37 +152,24 @@ namespace ADIDemoDec19
             Application.Exit();
         }
 
-        private void assessmentSubjectToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmSubjectAssessment frm = new frmSubjectAssessment();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void allAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAssesmentType frm = new frmAssesmentType();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void allUserRolesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmUserTypeList frm = new frmUserTypeList();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void allAssementTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void allAssessmentTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListAssessmentType frm = new frmListAssessmentType();
             frm.MdiParent = this;
             frm.Show();
         }
 
-        private void assessmentToolStripMenuItem_Click(object sender, EventArgs e)
+        private void subjectAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAssessment frm = new frmAssessment();
+
+            frmSubjectAssessment frm = new frmSubjectAssessment();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void allAssessmentSubjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListSubjectAss frm = new frmListSubjectAss();
             frm.MdiParent = this;
             frm.Show();
         }
