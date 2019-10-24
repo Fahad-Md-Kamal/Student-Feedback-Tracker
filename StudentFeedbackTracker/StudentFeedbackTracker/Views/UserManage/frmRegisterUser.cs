@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentFeedbackTracker.Helper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -80,5 +81,15 @@ namespace StudentFeedbackTracker.Views.UserManage
             }
         }
 
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCreateRole_Click(object sender, EventArgs e)
+        {
+            frmCreateRole frm = new frmCreateRole();
+            frm.Show();
+        }
     }
 }

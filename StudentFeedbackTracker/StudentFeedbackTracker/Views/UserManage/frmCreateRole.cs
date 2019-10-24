@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentFeedbackTracker.Helper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,23 +22,27 @@ namespace StudentFeedbackTracker.Views.UserManage
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            UserRole role = new UserRole() { uRole = txtRoleName.Text};
-            db.UserRoles.Add(role);
+
+            UserRole role = new UserRole
+            {
+                uRole = txtType.Text
+            };
             db.SaveChanges();
             LoadList();
 
-            MessageBox.Show("Data Inserted Successfully");
+            MessageBox.Show("Role Created Successfully");
         }
 
 
         private void LoadList()
         {
             var CList = db.UserRoles.Select(c => new { Id = c.Id, Role = c.uRole }).ToList();
-            dgv.DataSource = CList;
         }
 
 
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -71,26 +71,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assessment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AssessmentType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controls\frmStudentsBtns.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controls\frmStudentsBtns.Designer.cs">
       <DependentUpon>frmStudentsBtns.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cours.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Feedback.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FeedbackType.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
@@ -99,43 +84,85 @@
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\PanelformLoader.cs" />
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Subject.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserRole.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Views\frmCreateRole.cs">
+    <Compile Include="Views\Assessments\frmCreateAssessementType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCreateRole.Designer.cs">
+    <Compile Include="Views\Assessments\frmCreateAssessementType.Designer.cs">
+      <DependentUpon>frmCreateAssessementType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Assessments\frmAssessmentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Assessments\frmAssessmentDetail.Designer.cs">
+      <DependentUpon>frmAssessmentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Course\frmAssignStaffToCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Course\frmAssignStaffToCourse.Designer.cs">
+      <DependentUpon>frmAssignStaffToCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Course\frmAssignStudentToCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Course\frmAssignStudentToCourse.Designer.cs">
+      <DependentUpon>frmAssignStudentToCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Course\frmCourseCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Course\frmCourseCreation.Designer.cs">
+      <DependentUpon>frmCourseCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Feedback\frmCreateFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Feedback\frmCreateFeedback.Designer.cs">
+      <DependentUpon>frmCreateFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Note\frmPersonalNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Note\frmPersonalNote.Designer.cs">
+      <DependentUpon>frmPersonalNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subject\frmCreateSubjectAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Subject\frmCreateSubjectAssessment.Designer.cs">
+      <DependentUpon>frmCreateSubjectAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManage\frmCreateRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManage\frmCreateRole.Designer.cs">
       <DependentUpon>frmCreateRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmRegistrationForm.cs">
+    <Compile Include="Views\UserManage\frmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmRegistrationForm.Designer.cs">
-      <DependentUpon>frmRegistrationForm.cs</DependentUpon>
+    <Compile Include="Views\UserManage\frmForm.Designer.cs">
+      <DependentUpon>frmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManage\frmRegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManage\frmRegisterUser.Designer.cs">
+      <DependentUpon>frmRegisterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subject\frmCreationSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Subject\frmCreationSubject.Designer.cs">
+      <DependentUpon>frmCreationSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WordCloud\frmWordCloudChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\WordCloud\frmWordCloudChart.Designer.cs">
+      <DependentUpon>frmWordCloudChart.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Controls\frmStudentsBtns.resx">
       <DependentUpon>frmStudentsBtns.cs</DependentUpon>
@@ -152,19 +179,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\frmCreateRole.resx">
+    <EmbeddedResource Include="Views\Assessments\frmAssessmentDetail.resx">
+      <DependentUpon>frmAssessmentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Course\frmCourseCreation.resx">
+      <DependentUpon>frmCourseCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Feedback\frmCreateFeedback.resx">
+      <DependentUpon>frmCreateFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserManage\frmCreateRole.resx">
       <DependentUpon>frmCreateRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmRegistrationForm.resx">
-      <DependentUpon>frmRegistrationForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserManage\frmForm.resx">
+      <DependentUpon>frmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Views\UserManage\frmRegisterUser.resx">
+      <DependentUpon>frmRegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Subject\frmCreationSubject.resx">
+      <DependentUpon>frmCreationSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,21 +216,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="SqlScript.txt" />
   </ItemGroup>
@@ -214,10 +239,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Course\" />
-    <Folder Include="Views\Subject\" />
-    <Folder Include="Views\User\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

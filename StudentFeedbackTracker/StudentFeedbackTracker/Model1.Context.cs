@@ -13,10 +13,10 @@ namespace StudentFeedbackTracker
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Database1Entities1 : DbContext
+    public partial class Database1Entities2 : DbContext
     {
-        public Database1Entities1()
-            : base("name=Database1Entities1")
+        public Database1Entities2()
+            : base("name=Database1Entities2")
         {
         }
     
@@ -30,6 +30,7 @@ namespace StudentFeedbackTracker
         public virtual DbSet<Cours> Courses { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<FeedbackType> FeedbackTypes { get; set; }
+        public virtual DbSet<PersonalNote> PersonalNotes { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<User> Users { get; set; }

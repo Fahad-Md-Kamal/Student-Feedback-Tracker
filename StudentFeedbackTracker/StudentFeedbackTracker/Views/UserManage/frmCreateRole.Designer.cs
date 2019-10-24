@@ -28,107 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlForm = new System.Windows.Forms.Panel();
-            this.gbx = new System.Windows.Forms.GroupBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.txtRoleName = new System.Windows.Forms.TextBox();
-            this.lblRoleName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.gbxRoleForm = new System.Windows.Forms.GroupBox();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.lblType = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.pnlForm.SuspendLayout();
-            this.gbx.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.gbxRoleForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlForm
+            // gbxRoleForm
             // 
-            this.pnlForm.BackColor = System.Drawing.Color.White;
-            this.pnlForm.Controls.Add(this.gbx);
-            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlForm.Location = new System.Drawing.Point(0, 0);
-            this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(463, 602);
-            this.pnlForm.TabIndex = 0;
+            this.gbxRoleForm.BackColor = System.Drawing.Color.White;
+            this.gbxRoleForm.Controls.Add(this.btnCreate);
+            this.gbxRoleForm.Controls.Add(this.txtType);
+            this.gbxRoleForm.Controls.Add(this.lblType);
+            this.gbxRoleForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbxRoleForm.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxRoleForm.Location = new System.Drawing.Point(0, 0);
+            this.gbxRoleForm.Name = "gbxRoleForm";
+            this.gbxRoleForm.Size = new System.Drawing.Size(381, 580);
+            this.gbxRoleForm.TabIndex = 6;
+            this.gbxRoleForm.TabStop = false;
+            this.gbxRoleForm.Text = "Role Creation Form";
             // 
-            // gbx
+            // btnCreate
             // 
-            this.gbx.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gbx.BackColor = System.Drawing.Color.White;
-            this.gbx.Controls.Add(this.btnSubmit);
-            this.gbx.Controls.Add(this.txtRoleName);
-            this.gbx.Controls.Add(this.lblRoleName);
-            this.gbx.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbx.Location = new System.Drawing.Point(38, 124);
-            this.gbx.Name = "gbx";
-            this.gbx.Size = new System.Drawing.Size(387, 179);
-            this.gbx.TabIndex = 1;
-            this.gbx.TabStop = false;
-            this.gbx.Text = "Role Creation Form";
+            this.btnCreate.BackColor = System.Drawing.Color.White;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCreate.Location = new System.Drawing.Point(191, 264);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(157, 35);
+            this.btnCreate.TabIndex = 4;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnSubmit
+            // txtType
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.White;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSubmit.Location = new System.Drawing.Point(203, 116);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(157, 35);
-            this.btnSubmit.TabIndex = 4;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.txtType.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtType.Location = new System.Drawing.Point(119, 203);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(229, 26);
+            this.txtType.TabIndex = 1;
             // 
-            // txtRoleName
+            // lblType
             // 
-            this.txtRoleName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoleName.Location = new System.Drawing.Point(131, 55);
-            this.txtRoleName.Name = "txtRoleName";
-            this.txtRoleName.Size = new System.Drawing.Size(229, 26);
-            this.txtRoleName.TabIndex = 1;
-            // 
-            // lblRoleName
-            // 
-            this.lblRoleName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoleName.Location = new System.Drawing.Point(19, 58);
-            this.lblRoleName.Name = "lblRoleName";
-            this.lblRoleName.Size = new System.Drawing.Size(84, 23);
-            this.lblRoleName.TabIndex = 0;
-            this.lblRoleName.Text = "Role Name:";
-            this.lblRoleName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgv);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(463, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 602);
-            this.panel2.TabIndex = 1;
+            this.lblType.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Location = new System.Drawing.Point(7, 206);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(84, 23);
+            this.lblType.TabIndex = 0;
+            this.lblType.Text = "Role Name:";
+            this.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgv
             // 
             this.dgv.BackgroundColor = System.Drawing.Color.White;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv.Location = new System.Drawing.Point(0, 0);
+            this.dgv.Location = new System.Drawing.Point(381, 0);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(618, 602);
-            this.dgv.TabIndex = 0;
+            this.dgv.Size = new System.Drawing.Size(310, 580);
+            this.dgv.TabIndex = 7;
             // 
             // frmCreateRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 602);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlForm);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(691, 580);
+            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.gbxRoleForm);
             this.Name = "frmCreateRole";
             this.Text = "frmCreateRole";
-            this.pnlForm.ResumeLayout(false);
-            this.gbx.ResumeLayout(false);
-            this.gbx.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.gbxRoleForm.ResumeLayout(false);
+            this.gbxRoleForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
@@ -136,12 +110,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlForm;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox gbx;
-        private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox txtRoleName;
-        private System.Windows.Forms.Label lblRoleName;
+        private System.Windows.Forms.GroupBox gbxRoleForm;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.DataGridView dgv;
     }
 }

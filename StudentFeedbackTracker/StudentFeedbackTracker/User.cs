@@ -17,6 +17,7 @@ namespace StudentFeedbackTracker
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
+            this.PersonalNotes = new HashSet<PersonalNote>();
             this.Courses = new HashSet<Cours>();
         }
     
@@ -31,6 +32,8 @@ namespace StudentFeedbackTracker
         public Nullable<System.DateTime> LastLogin { get; set; }
         public int RoleId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PersonalNote> PersonalNotes { get; set; }
         public virtual UserRole UserRole { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Cours> Courses { get; set; }
