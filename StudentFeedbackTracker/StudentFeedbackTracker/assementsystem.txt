@@ -1,0 +1,125 @@
+CREATE TABLE [dbo].[tblUserType]
+(
+    [typeId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [tName] VARCHAR(50) NULL
+);
+
+
+CREATE TABLE [dbo].[tblUsers] (
+    [uId]    INT          IDENTITY (1, 1) NOT NULL,
+    [userName] VARCHAR (50) NULL ,
+    [uPass] VARCHAR (50) NULL,
+    [fullName] VARCHAR (50) NULL,
+    [DOB]   DATE         NULL,
+    [typeId]  VARCHAR (50) NULL,
+    [Email] VARCHAR (50) NULL,
+    [startDate]    date NULL,
+    PRIMARY KEY CLUSTERED ([uId] ASC),
+    UNIQUE NONCLUSTERED ([Email] ASC), 
+ CONSTRAINT [FK_tblUserType_ToTable] FOREIGN KEY ([cId]) REFERENCES [ttblUserType]([typeId]),
+ );
+
+
+CREATE TABLE [dbo].[tblCourses]
+(
+    [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [cName] VARCHAR(50) NULL
+);
+CREATE TABLE [dbo].[tblAssessmentType]
+(
+    [atId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [assessmentType] VARCHAR(50) NULL,
+    [mark] int null
+	
+);
+CREATE TABLE [dbo].[tblSubjects]
+(
+    [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [sName] VARCHAR(50) NULL, 
+    [cId] INT, 
+    [uId] INT NULL, 
+    CONSTRAINT [FK_tblCourses_ToTable] FOREIGN KEY ([cId]) REFERENCES [tblCourses]([Id]),
+    CONSTRAINT [FK_tblUser_ToTable] FOREIGN KEY ([uId]) REFERENCES [dbo].[tblUser] ([uId])
+);
+
+CREATE TABLE [dbo].[tblSubjectsAssessmenttype]
+(
+    [Id] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [atId]  INT NULL, 
+    [sId] INT NULL, 
+    CONSTRAINT [FK_tblAssessmentType_ToTable] FOREIGN KEY ([atId] ) REFERENCES [tblAssessmentType]([atId] ),
+    CONSTRAINT [FK_tblSubject_ToTable] FOREIGN KEY ([sId]) REFERENCES [dbo].[tblSubject] ([sId])
+);
+
+
+CREATE TABLE [dbo].[tblStudentCourse]
+(
+    [csId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [cId] INT NULL, 
+    [uId] INT NULL, 
+    CONSTRAINT [FK_tblcourse_ToTable] FOREIGN KEY ([cId]) REFERENCES [tblCourses]([Id]),
+    CONSTRAINT [FK_tblUser_ToTable] FOREIGN KEY ([sId]) REFERENCES [dbo].[tblUser] ([uId])
+);
+
+CREATE TABLE [dbo].[tblGrade]
+(
+    [gId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [gradeSign] VARCHAR(10),
+    [maxMark] INT NULL, 
+    [Min] INT NULL
+    
+);
+
+
+CREATE TABLE [dbo].[tblAssessment]
+(
+    [asId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [csId]  INT NULL, 
+    [mark]  INT NULL, 
+    [gId] Int null,
+    [sId] INT null,
+    [astId] INT null,
+    [assDate] date null,
+    CONSTRAINT [FK_tblcourse_ToTable] FOREIGN KEY ([cId]) REFERENCES [tblCourses]([Id]),
+    CONSTRAINT [FK_tblUser_ToTable] FOREIGN KEY ([sId]) REFERENCES [dbo].[tblUser] ([uId])
+);
+CREATE TABLE [dbo].[tblFeedbackType]
+(
+    [fbtId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [Type] VARCHAR(10),
+    [description] VARCHAR(10) NULL
+  
+);
+
+CREATE TABLE [dbo].[tblFeedback]
+(
+    [fbId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [keyword] VARCHAR(10),
+    [description] VARCHAR(10) NULL,
+    [fbtId] INT null,
+    [asId] INT,
+    CONSTRAINT [tblFeedbackType] FOREIGN KEY ([fbtId]) REFERENCES [tblFeedbackType]([fbtId])
+    
+);
+
+CREATE TABLE [dbo].[tblNote]
+(
+    [nId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [fbId] VARCHAR(10),
+    [note] VARCHAR(10) NULL,
+    [uId] INT null,
+    CONSTRAINT [tblFeedback] FOREIGN KEY ([fbId] ) REFERENCES [tblFeedback] ([fbId] )
+    
+);
+
+
+
+CREATE TABLE [dbo].[tblWordCloud]
+(
+    [wId] INT IDENTITY NOT NULL PRIMARY KEY, 
+    [word] VARCHAR(10),
+    [description] VARCHAR(10) NULL,
+    [fbId] INT null,
+    CONSTRAINT [tblFeedback] FOREIGN KEY ([fbId] ) REFERENCES [tblFeedback] ([fbId] )
+    
+);

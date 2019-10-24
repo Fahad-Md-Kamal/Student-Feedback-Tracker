@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{535BCFCF-4C8C-42A6-A080-0F92412397DF}</ProjectGuid>
+    <ProjectGuid>{3365E64D-2F66-4EAD-8335-1EE82871B73A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StudentFeedbackTracker</RootNamespace>
-    <AssemblyName>StudentFeedbackTracker</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ADIDemoDec19</RootNamespace>
+    <AssemblyName>ADIDemoDec19</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -49,17 +49,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,104 +73,251 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\frmStudentsBtns.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\frmStudentsBtns.Designer.cs">
-      <DependentUpon>frmStudentsBtns.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBase.cs">
+    <Compile Include="Forms\frmAssesmentType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBase.Designer.cs">
-      <DependentUpon>frmBase.cs</DependentUpon>
+    <Compile Include="Forms\frmAssesmentType.Designer.cs">
+      <DependentUpon>frmAssesmentType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\PanelformLoader.cs" />
+    <Compile Include="Forms\frmAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAssessment.Designer.cs">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmUserTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmUserTypeList.Designer.cs">
+      <DependentUpon>frmUserTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBarChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBarChart.Designer.cs">
+      <DependentUpon>frmBarChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangeUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangeUserInfo.Designer.cs">
+      <DependentUpon>frmChangeUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangeUsertype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangeUsertype.Designer.cs">
+      <DependentUpon>frmChangeUsertype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmCourseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmCourseList.Designer.cs">
+      <DependentUpon>frmCourseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeedback.Designer.cs">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFeedbackType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFeedbackType.Designer.cs">
+      <DependentUpon>frmFeedbackType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGrade.Designer.cs">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListAssessment.Designer.cs">
+      <DependentUpon>frmListAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListAssessmentType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListAssessmentType.Designer.cs">
+      <DependentUpon>frmListAssessmentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListStaff.Designer.cs">
+      <DependentUpon>frmListStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListStudent.Designer.cs">
+      <DependentUpon>frmListStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListSubjectAss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListSubjectAss.Designer.cs">
+      <DependentUpon>frmListSubjectAss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmListUserType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmListUserType.Designer.cs">
+      <DependentUpon>frmListUserType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNote.Designer.cs">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStaffRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStaffRegister.Designer.cs">
+      <DependentUpon>frmStaffRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmStudentRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStudentRegister.Designer.cs">
+      <DependentUpon>frmStudentRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubject.Designer.cs">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubjectAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubjectAssessment.Designer.cs">
+      <DependentUpon>frmSubjectAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubjectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubjectList.Designer.cs">
+      <DependentUpon>frmSubjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lists\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lists\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWordCloud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWordCloud.Designer.cs">
+      <DependentUpon>frmWordCloud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Assessments\frmCreateAssessementType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Assessments\frmCreateAssessementType.Designer.cs">
-      <DependentUpon>frmCreateAssessementType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Assessments\frmAssessmentDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Assessments\frmAssessmentDetail.Designer.cs">
-      <DependentUpon>frmAssessmentDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Course\frmAssignStaffToCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Course\frmAssignStaffToCourse.Designer.cs">
-      <DependentUpon>frmAssignStaffToCourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Course\frmAssignStudentToCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Course\frmAssignStudentToCourse.Designer.cs">
-      <DependentUpon>frmAssignStudentToCourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Course\frmCourseCreation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Course\frmCourseCreation.Designer.cs">
-      <DependentUpon>frmCourseCreation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Feedback\frmCreateFeedback.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Feedback\frmCreateFeedback.Designer.cs">
-      <DependentUpon>frmCreateFeedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Note\frmPersonalNote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Note\frmPersonalNote.Designer.cs">
-      <DependentUpon>frmPersonalNote.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subject\frmCreateSubjectAssessment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Subject\frmCreateSubjectAssessment.Designer.cs">
-      <DependentUpon>frmCreateSubjectAssessment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserManage\frmCreateRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UserManage\frmCreateRole.Designer.cs">
-      <DependentUpon>frmCreateRole.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserManage\frmForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UserManage\frmForm.Designer.cs">
-      <DependentUpon>frmForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\UserManage\frmRegisterUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\UserManage\frmRegisterUser.Designer.cs">
-      <DependentUpon>frmRegisterUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Subject\frmCreationSubject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Subject\frmCreationSubject.Designer.cs">
-      <DependentUpon>frmCreationSubject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\WordCloud\frmWordCloudChart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\WordCloud\frmWordCloudChart.Designer.cs">
-      <DependentUpon>frmWordCloudChart.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Controls\frmStudentsBtns.resx">
-      <DependentUpon>frmStudentsBtns.cs</DependentUpon>
+    <Compile Include="Tools.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBase.resx">
-      <DependentUpon>frmBase.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmAssesmentType.resx">
+      <DependentUpon>frmAssesmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAssessment.resx">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBarChart.resx">
+      <DependentUpon>frmBarChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangeUserInfo.resx">
+      <DependentUpon>frmChangeUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangeUsertype.resx">
+      <DependentUpon>frmChangeUsertype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmCourseList.resx">
+      <DependentUpon>frmCourseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFeedback.resx">
+      <DependentUpon>frmFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFeedbackType.resx">
+      <DependentUpon>frmFeedbackType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGrade.resx">
+      <DependentUpon>frmGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListAssessment.resx">
+      <DependentUpon>frmListAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListAssessmentType.resx">
+      <DependentUpon>frmListAssessmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListStaff.resx">
+      <DependentUpon>frmListStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListStudent.resx">
+      <DependentUpon>frmListStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListSubjectAss.resx">
+      <DependentUpon>frmListSubjectAss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmListUserType.resx">
+      <DependentUpon>frmListUserType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNote.resx">
+      <DependentUpon>frmNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStaffRegister.resx">
+      <DependentUpon>frmStaffRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStudentRegister.resx">
+      <DependentUpon>frmStudentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubject.resx">
+      <DependentUpon>frmSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubjectAssessment.resx">
+      <DependentUpon>frmSubjectAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubjectList.resx">
+      <DependentUpon>frmSubjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWordCloud.resx">
+      <DependentUpon>frmWordCloud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lists\frmUserTypeList.resx">
+      <DependentUpon>frmUserTypeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,27 +328,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\Assessments\frmAssessmentDetail.resx">
-      <DependentUpon>frmAssessmentDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Course\frmCourseCreation.resx">
-      <DependentUpon>frmCourseCreation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Feedback\frmCreateFeedback.resx">
-      <DependentUpon>frmCreateFeedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserManage\frmCreateRole.resx">
-      <DependentUpon>frmCreateRole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserManage\frmForm.resx">
-      <DependentUpon>frmForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserManage\frmRegisterUser.resx">
-      <DependentUpon>frmRegisterUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Subject\frmCreationSubject.resx">
-      <DependentUpon>frmCreationSubject.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -222,7 +351,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="SqlScript.txt" />
+    <Content Include="DBScript.txt" />
+    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -239,6 +369,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

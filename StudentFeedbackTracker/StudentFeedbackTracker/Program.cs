@@ -1,11 +1,10 @@
-﻿using StudentFeedbackTracker.Views.UserManage;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentFeedbackTracker
+namespace ADIDemoDec19
 {
     static class Program
     {
@@ -17,8 +16,8 @@ namespace StudentFeedbackTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBase());
-            //Application.Run(new frmRegisterUser());
+            //Application.Run(new frmLogin());
+            Application.Run(new Form1());
         }
     }
 }
