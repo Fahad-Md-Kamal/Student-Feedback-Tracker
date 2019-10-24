@@ -16,6 +16,7 @@
           <Property Name="gId" Type="int" />
           <Property Name="assId" Type="int" />
           <Property Name="assDate" Type="date" />
+          <Property Name="assTitle" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="AssessmentType">
           <Key>
@@ -142,7 +143,31 @@
           <Property Name="Description" Type="varchar" MaxLength="50" />
           <Property Name="fbId" Type="int" />
         </EntityType>
-        <Association Name="FK_Assessment_ToTable">
+        <Association Name="FK_Assessment_ToAssess">
+          <End Role="AssessmentType" Type="Self.AssessmentType" Multiplicity="0..1" />
+          <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assessment">
+              <PropertyRef Name="assId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assessment_ToCourse">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assessment">
+              <PropertyRef Name="cId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assessment_ToGrade">
           <End Role="Grade" Type="Self.Grade" Multiplicity="0..1" />
           <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,103 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Student_ToTable">
-          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
-          <End Role="Student" Type="Self.Student" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Course">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Student">
-              <PropertyRef Name="cId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Student_ToTable_1">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Student" Type="Self.Student" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Student">
-              <PropertyRef Name="uId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Student_ToTable_3">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Staff">
-              <PropertyRef Name="uId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblcourse_ToTable">
-          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
-          <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Course">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="StudentCourse">
-              <PropertyRef Name="cId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblcourse_ToTable1">
-          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
-          <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Course">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Assessment">
-              <PropertyRef Name="cId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblCourses_ToTable">
-          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
-          <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Course">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Subject">
-              <PropertyRef Name="cId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSubject_ToTable">
-          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
-          <End Role="SubjectAssessment" Type="Self.SubjectAssessment" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Subject">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="SubjectAssessment">
-              <PropertyRef Name="sId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblUser_ToTable">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="User">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="StudentCourse">
-              <PropertyRef Name="uId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblUser_ToTable1">
+        <Association Name="FK_Assessment_ToUser">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -262,31 +191,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblUser_ToTable2">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Note" Type="Self.Note" Multiplicity="*" />
+        <Association Name="FK_Feedback_ToAssess">
+          <End Role="Assessment" Type="Self.Assessment" Multiplicity="0..1" />
+          <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="User">
+            <Principal Role="Assessment">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Note">
-              <PropertyRef Name="uId" />
+            <Dependent Role="Feedback">
+              <PropertyRef Name="assId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_User_ToTable">
-          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
+        <Association Name="FK_Feedback_ToFeedbackType">
+          <End Role="FeedbackType" Type="Self.FeedbackType" Multiplicity="0..1" />
+          <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="UserType">
+            <Principal Role="FeedbackType">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="User">
-              <PropertyRef Name="typeId" />
+            <Dependent Role="Feedback">
+              <PropertyRef Name="fbTypeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tblFeedback_totable">
+        <Association Name="FK_Note_ToFeedback">
           <End Role="Feedback" Type="Self.Feedback" Multiplicity="0..1" />
           <End Role="Note" Type="Self.Note" Multiplicity="*" />
           <ReferentialConstraint>
@@ -298,15 +227,123 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tblFeedbackType_toTable2">
-          <End Role="FeedbackType" Type="Self.FeedbackType" Multiplicity="0..1" />
-          <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
+        <Association Name="FK_Note_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Note" Type="Self.Note" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="FeedbackType">
+            <Principal Role="User">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Feedback">
-              <PropertyRef Name="fbTypeId" />
+            <Dependent Role="Note">
+              <PropertyRef Name="uId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Staff_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Staff" Type="Self.Staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Staff">
+              <PropertyRef Name="uId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_ToCourse">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="cId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Student" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Student">
+              <PropertyRef Name="uId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentCourse_ToCourse">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentCourse">
+              <PropertyRef Name="cId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentCourse_ToUser">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="Self.StudentCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudentCourse">
+              <PropertyRef Name="uId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subject_ToCourse">
+          <End Role="Course" Type="Self.Course" Multiplicity="0..1" />
+          <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="cId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubjectAssessment_ToAssess">
+          <End Role="AssessmentType" Type="Self.AssessmentType" Multiplicity="0..1" />
+          <End Role="SubjectAssessment" Type="Self.SubjectAssessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectAssessment">
+              <PropertyRef Name="asId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubjectAssessment_ToSubject">
+          <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+          <End Role="SubjectAssessment" Type="Self.SubjectAssessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectAssessment">
+              <PropertyRef Name="sId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_ToUserType">
+          <End Role="UserType" Type="Self.UserType" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="typeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -338,61 +375,73 @@
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WordCloud" EntityType="Self.WordCloud" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Assessment_ToTable" Association="Self.FK_Assessment_ToTable">
+          <AssociationSet Name="FK_Assessment_ToAssess" Association="Self.FK_Assessment_ToAssess">
+            <End Role="AssessmentType" EntitySet="AssessmentType" />
+            <End Role="Assessment" EntitySet="Assessment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assessment_ToCourse" Association="Self.FK_Assessment_ToCourse">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Assessment" EntitySet="Assessment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Assessment_ToGrade" Association="Self.FK_Assessment_ToGrade">
             <End Role="Grade" EntitySet="Grade" />
             <End Role="Assessment" EntitySet="Assessment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_ToTable" Association="Self.FK_Student_ToTable">
-            <End Role="Course" EntitySet="Course" />
-            <End Role="Student" EntitySet="Student" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Student_ToTable_1" Association="Self.FK_Student_ToTable_1">
+          <AssociationSet Name="FK_Assessment_ToUser" Association="Self.FK_Assessment_ToUser">
             <End Role="User" EntitySet="User" />
-            <End Role="Student" EntitySet="Student" />
+            <End Role="Assessment" EntitySet="Assessment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Student_ToTable_3" Association="Self.FK_Student_ToTable_3">
+          <AssociationSet Name="FK_Feedback_ToAssess" Association="Self.FK_Feedback_ToAssess">
+            <End Role="Assessment" EntitySet="Assessment" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Feedback_ToFeedbackType" Association="Self.FK_Feedback_ToFeedbackType">
+            <End Role="FeedbackType" EntitySet="FeedbackType" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Note_ToFeedback" Association="Self.FK_Note_ToFeedback">
+            <End Role="Feedback" EntitySet="Feedback" />
+            <End Role="Note" EntitySet="Note" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Note_ToUser" Association="Self.FK_Note_ToUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Note" EntitySet="Note" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Staff_ToUser" Association="Self.FK_Staff_ToUser">
             <End Role="User" EntitySet="User" />
             <End Role="Staff" EntitySet="Staff" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblcourse_ToTable" Association="Self.FK_tblcourse_ToTable">
+          <AssociationSet Name="FK_Student_ToCourse" Association="Self.FK_Student_ToCourse">
+            <End Role="Course" EntitySet="Course" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_ToUser" Association="Self.FK_Student_ToUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Student" EntitySet="Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentCourse_ToCourse" Association="Self.FK_StudentCourse_ToCourse">
             <End Role="Course" EntitySet="Course" />
             <End Role="StudentCourse" EntitySet="StudentCourse" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblcourse_ToTable1" Association="Self.FK_tblcourse_ToTable1">
-            <End Role="Course" EntitySet="Course" />
-            <End Role="Assessment" EntitySet="Assessment" />
+          <AssociationSet Name="FK_StudentCourse_ToUser" Association="Self.FK_StudentCourse_ToUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="StudentCourse" EntitySet="StudentCourse" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblCourses_ToTable" Association="Self.FK_tblCourses_ToTable">
+          <AssociationSet Name="FK_Subject_ToCourse" Association="Self.FK_Subject_ToCourse">
             <End Role="Course" EntitySet="Course" />
             <End Role="Subject" EntitySet="Subject" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSubject_ToTable" Association="Self.FK_tblSubject_ToTable">
+          <AssociationSet Name="FK_SubjectAssessment_ToAssess" Association="Self.FK_SubjectAssessment_ToAssess">
+            <End Role="AssessmentType" EntitySet="AssessmentType" />
+            <End Role="SubjectAssessment" EntitySet="SubjectAssessment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubjectAssessment_ToSubject" Association="Self.FK_SubjectAssessment_ToSubject">
             <End Role="Subject" EntitySet="Subject" />
             <End Role="SubjectAssessment" EntitySet="SubjectAssessment" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblUser_ToTable" Association="Self.FK_tblUser_ToTable">
-            <End Role="User" EntitySet="User" />
-            <End Role="StudentCourse" EntitySet="StudentCourse" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblUser_ToTable1" Association="Self.FK_tblUser_ToTable1">
-            <End Role="User" EntitySet="User" />
-            <End Role="Assessment" EntitySet="Assessment" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblUser_ToTable2" Association="Self.FK_tblUser_ToTable2">
-            <End Role="User" EntitySet="User" />
-            <End Role="Note" EntitySet="Note" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_ToTable" Association="Self.FK_User_ToTable">
+          <AssociationSet Name="FK_User_ToUserType" Association="Self.FK_User_ToUserType">
             <End Role="UserType" EntitySet="UserType" />
             <End Role="User" EntitySet="User" />
-          </AssociationSet>
-          <AssociationSet Name="tblFeedback_totable" Association="Self.tblFeedback_totable">
-            <End Role="Feedback" EntitySet="Feedback" />
-            <End Role="Note" EntitySet="Note" />
-          </AssociationSet>
-          <AssociationSet Name="tblFeedbackType_toTable2" Association="Self.tblFeedbackType_toTable2">
-            <End Role="FeedbackType" EntitySet="FeedbackType" />
-            <End Role="Feedback" EntitySet="Feedback" />
           </AssociationSet>
           <AssociationSet Name="tblWCount" Association="Self.tblWCount">
             <End Role="Feedback" EntitySet="Feedback" />
@@ -426,6 +475,7 @@
           <NavigationProperty Name="Notes" Relationship="Self.tblFeedback_totable" FromRole="Feedback" ToRole="Note" />
           <NavigationProperty Name="FeedbackType" Relationship="Self.tblFeedbackType_toTable2" FromRole="Feedback" ToRole="FeedbackType" />
           <NavigationProperty Name="WordClouds" Relationship="Self.tblWCount" FromRole="Feedback" ToRole="WordCloud" />
+          <NavigationProperty Name="Assessment" Relationship="Database1Model.FK_Feedback_ToAssess" FromRole="Feedback" ToRole="Assessment" />
         </EntityType>
         <EntityType Name="FeedbackType">
           <Key>
@@ -490,6 +540,7 @@
           <Property Name="asId" Type="Int32" />
           <Property Name="sId" Type="Int32" />
           <NavigationProperty Name="Subject" Relationship="Self.FK_tblSubject_ToTable" FromRole="SubjectAssessment" ToRole="Subject" />
+          <NavigationProperty Name="AssessmentType" Relationship="Database1Model.FK_SubjectAssessment_ToAssess" FromRole="SubjectAssessment" ToRole="AssessmentType" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -708,6 +759,18 @@
             <End Role="User" EntitySet="Users" />
             <End Role="StudentCourse" EntitySet="StudentCourses" />
           </AssociationSet>
+          <AssociationSet Name="FK_Assessment_ToAssess" Association="Database1Model.FK_Assessment_ToAssess">
+            <End Role="AssessmentType" EntitySet="AssessmentTypes" />
+            <End Role="Assessment" EntitySet="Assessments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Feedback_ToAssess" Association="Database1Model.FK_Feedback_ToAssess">
+            <End Role="Assessment" EntitySet="Assessments" />
+            <End Role="Feedback" EntitySet="Feedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubjectAssessment_ToAssess" Association="Database1Model.FK_SubjectAssessment_ToAssess">
+            <End Role="AssessmentType" EntitySet="AssessmentTypes" />
+            <End Role="SubjectAssessment" EntitySet="SubjectAssessments" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Staff">
           <Key>
@@ -741,6 +804,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="assType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Mark" Type="Int32" />
+          <NavigationProperty Name="Assessments" Relationship="Database1Model.FK_Assessment_ToAssess" FromRole="AssessmentType" ToRole="Assessment" />
+          <NavigationProperty Name="SubjectAssessments" Relationship="Database1Model.FK_SubjectAssessment_ToAssess" FromRole="AssessmentType" ToRole="SubjectAssessment" />
         </EntityType>
         <EntityType Name="Assessment">
           <Key>
@@ -756,6 +821,9 @@
           <NavigationProperty Name="Grade" Relationship="Database1Model.FK_Assessment_ToTable" FromRole="Assessment" ToRole="Grade" />
           <NavigationProperty Name="Course" Relationship="Database1Model.FK_tblcourse_ToTable1" FromRole="Assessment" ToRole="Course" />
           <NavigationProperty Name="User" Relationship="Database1Model.FK_tblUser_ToTable1" FromRole="Assessment" ToRole="User" />
+          <NavigationProperty Name="AssessmentType" Relationship="Database1Model.FK_Assessment_ToAssess" FromRole="Assessment" ToRole="AssessmentType" />
+          <NavigationProperty Name="Feedbacks" Relationship="Database1Model.FK_Feedback_ToAssess" FromRole="Assessment" ToRole="Feedback" />
+          <Property Name="assTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="StudentCourse">
           <Key>
@@ -824,6 +892,42 @@
             </Principal>
             <Dependent Role="StudentCourse">
               <PropertyRef Name="uId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Assessment_ToAssess">
+          <End Type="Database1Model.AssessmentType" Role="AssessmentType" Multiplicity="0..1" />
+          <End Type="Database1Model.Assessment" Role="Assessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Assessment">
+              <PropertyRef Name="assId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Feedback_ToAssess">
+          <End Type="Database1Model.Assessment" Role="Assessment" Multiplicity="0..1" />
+          <End Type="Database1Model.Feedback" Role="Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Assessment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="assId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubjectAssessment_ToAssess">
+          <End Type="Database1Model.AssessmentType" Role="AssessmentType" Multiplicity="0..1" />
+          <End Type="Database1Model.SubjectAssessment" Role="SubjectAssessment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubjectAssessment">
+              <PropertyRef Name="asId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -966,6 +1070,7 @@
           <EntitySetMapping Name="Assessments">
             <EntityTypeMapping TypeName="Database1Model.Assessment">
               <MappingFragment StoreEntitySet="Assessment">
+                <ScalarProperty Name="assTitle" ColumnName="assTitle" />
                 <ScalarProperty Name="assDate" ColumnName="assDate" />
                 <ScalarProperty Name="assId" ColumnName="assId" />
                 <ScalarProperty Name="gId" ColumnName="gId" />
@@ -1038,6 +1143,9 @@
         <AssociationConnector Association="Database1Model.FK_tblUser_ToTable1" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK_tblcourse_ToTable" ManuallyRouted="false" />
         <AssociationConnector Association="Database1Model.FK_tblUser_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Assessment_ToAssess" />
+        <AssociationConnector Association="Database1Model.FK_Feedback_ToAssess" />
+        <AssociationConnector Association="Database1Model.FK_SubjectAssessment_ToAssess" />
       </Diagram>
     </Diagrams>
   </Designer>

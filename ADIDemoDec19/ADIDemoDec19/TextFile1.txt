@@ -117,6 +117,7 @@ CREATE TABLE [dbo].[Grade]
 
 CREATE TABLE [dbo].[Assessment] (
     [Id]      INT  IDENTITY (1, 1) NOT NULL,
+    [assTitle] VARCHAR(100) NULL, 
     [cId]     INT  NULL,
     [mark]    INT  NULL,
     [uId]     INT  NULL,
@@ -124,10 +125,13 @@ CREATE TABLE [dbo].[Assessment] (
     [assId]   INT  NULL,
     [assDate] DATE NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_tblcourse_ToTable1] FOREIGN KEY ([cId]) REFERENCES [dbo].[Course] ([Id]),
-    CONSTRAINT [FK_tblUser_ToTable1] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id]), 
-    CONSTRAINT [FK_Assessment_ToTable] FOREIGN KEY ([gid]) REFERENCES [Grade]([Id])
+    CONSTRAINT [FK_Assessment_ToCourse] FOREIGN KEY ([cId]) REFERENCES [dbo].[Course] ([Id]),
+    CONSTRAINT [FK_Assessment_ToUser] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id]),
+    CONSTRAINT [FK_Assessment_ToAssess] FOREIGN KEY ([assId]) REFERENCES [dbo].[AssessmentType] ([Id]),
+    CONSTRAINT [FK_Assessment_ToGrade] FOREIGN KEY ([gId]) REFERENCES [dbo].[Grade] ([Id])
 );
+
+
 
 CREATE TABLE [dbo].[FeedbackType]
 (

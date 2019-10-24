@@ -187,5 +187,33 @@ namespace ADIDemoDec19
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void feedbackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFeedback frm = new frmFeedback();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void feedbackTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFeedbackType frm = new frmFeedbackType();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void allFeedbacksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListFeedback frm = new frmListFeedback();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void barChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBarChart frm = new frmBarChart();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

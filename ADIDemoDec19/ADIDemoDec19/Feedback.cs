@@ -32,5 +32,6 @@ namespace ADIDemoDec19
         public virtual FeedbackType FeedbackType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WordCloud> WordClouds { get; set; }
+        public virtual Assessment Assessment { get; set; }
     }
 }

@@ -19,5 +19,6 @@ namespace ADIDemoDec19
         public Nullable<int> sId { get; set; }
     
         public virtual Subject Subject { get; set; }
+        public virtual AssessmentType AssessmentType { get; set; }
     }
 }

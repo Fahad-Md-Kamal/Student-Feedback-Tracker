@@ -14,8 +14,20 @@ namespace ADIDemoDec19
     
     public partial class AssessmentType
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public AssessmentType()
+        {
+            this.Assessments = new HashSet<Assessment>();
+            this.SubjectAssessments = new HashSet<SubjectAssessment>();
+        }
+    
         public int Id { get; set; }
         public string assType { get; set; }
         public Nullable<int> Mark { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Assessment> Assessments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SubjectAssessment> SubjectAssessments { get; set; }
     }
 }

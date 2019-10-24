@@ -14,6 +14,12 @@ namespace ADIDemoDec19
     
     public partial class Assessment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Assessment()
+        {
+            this.Feedbacks = new HashSet<Feedback>();
+        }
+    
         public int Id { get; set; }
         public Nullable<int> cId { get; set; }
         public Nullable<int> mark { get; set; }
@@ -21,9 +27,13 @@ namespace ADIDemoDec19
         public Nullable<int> gId { get; set; }
         public Nullable<int> assId { get; set; }
         public Nullable<System.DateTime> assDate { get; set; }
+        public string assTitle { get; set; }
     
         public virtual Grade Grade { get; set; }
         public virtual Course Course { get; set; }
         public virtual User User { get; set; }
+        public virtual AssessmentType AssessmentType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
     }
 }

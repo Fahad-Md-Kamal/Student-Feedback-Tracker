@@ -34,10 +34,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
             this.txtKeyword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblKeyword = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label5
             // 
@@ -89,10 +90,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtDescription);
+            this.groupBox1.Controls.Add(this.lblDescription);
             this.groupBox1.Controls.Add(this.txtKeyword);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblKeyword);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cboAss);
             this.groupBox1.Controls.Add(this.btnSubmit);
@@ -105,6 +106,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Feedback Information";
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(134, 69);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(121, 20);
+            this.txtDescription.TabIndex = 27;
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDescription.Location = new System.Drawing.Point(27, 67);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(100, 23);
+            this.lblDescription.TabIndex = 26;
+            this.lblDescription.Text = "Description : ";
+            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtKeyword
             // 
             this.txtKeyword.Location = new System.Drawing.Point(134, 34);
@@ -112,32 +130,15 @@
             this.txtKeyword.Size = new System.Drawing.Size(121, 20);
             this.txtKeyword.TabIndex = 25;
             // 
-            // label1
+            // lblKeyword
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(27, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Keyword : ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(134, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 27;
-            // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(27, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Description : ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblKeyword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblKeyword.Location = new System.Drawing.Point(27, 32);
+            this.lblKeyword.Name = "lblKeyword";
+            this.lblKeyword.Size = new System.Drawing.Size(100, 23);
+            this.lblKeyword.TabIndex = 24;
+            this.lblKeyword.Text = "Keyword : ";
+            this.lblKeyword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmFeedback
             // 
@@ -161,9 +162,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtKeyword;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblKeyword;
     }
 }

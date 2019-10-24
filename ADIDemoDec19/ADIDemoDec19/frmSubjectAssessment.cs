@@ -32,7 +32,6 @@ namespace ADIDemoDec19
             cboAss.DisplayMember = "assType";
             cboAss.ValueMember = "Id";
 
-            cboAss.SelectedIndex = 0;
         }
 
 
@@ -44,7 +43,6 @@ namespace ADIDemoDec19
             cboSubject.DisplayMember = "sName";
             cboSubject.ValueMember = "Id";
 
-            cboSubject.SelectedIndex = 0;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
