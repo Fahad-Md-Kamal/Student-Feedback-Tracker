@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bafaef75f60f43fb9073a07fdae8b5af" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Course" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Feedback" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.FeedbackType" Width="1.5" PointX="3.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Grade" Width="1.5" PointX="2.375" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Note" Width="1.5" PointX="7.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Student" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Subject" Width="1.5" PointX="0.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.SubjectAssessment" Width="1.5" PointX="4.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.User" Width="1.5" PointX="4.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.UserType" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.WordCloud" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.FK_Student_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_tblCourses_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.tblFeedback_totable" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.tblFeedbackType_toTable2" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.tblWCount" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_tblUser_ToTable2" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_Student_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_tblSubject_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="Database1Model.FK_User_ToTable" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Database1Model.Staff" Width="1.5" PointX="5.875" PointY="0.5" />
+        <AssociationConnector Association="Database1Model.FK_Student_ToTable_3" />
+        <EntityTypeShape EntityType="Database1Model.AssessmentType" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Database1Model.Assessment" Width="1.5" PointX="10.375" PointY="5.875" />
+        <EntityTypeShape EntityType="Database1Model.StudentCourse" Width="1.5" PointX="6.375" PointY="0.75" />
+        <AssociationConnector Association="Database1Model.FK_Assessment_ToTable" />
+        <AssociationConnector Association="Database1Model.FK_tblcourse_ToTable1" />
+        <AssociationConnector Association="Database1Model.FK_tblUser_ToTable1" />
+        <AssociationConnector Association="Database1Model.FK_tblcourse_ToTable" />
+        <AssociationConnector Association="Database1Model.FK_tblUser_ToTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
