@@ -215,5 +215,19 @@ namespace ADIDemoDec19
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void noteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNote frm = new frmNote();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void allNotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListNote frm = new frmListNote();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

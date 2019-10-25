@@ -56,6 +56,7 @@ namespace ADIDemoDec19
             ass.uId = Convert.ToInt32(cboUser.SelectedValue);
             ass.assId = Convert.ToInt32(cboAss.SelectedValue);
             ass.mark = Convert.ToInt32(txtMark.Text);
+            ass.assTitle = txtTitle.Text;
 
             db.Assessments.Add(ass);
             db.SaveChanges();

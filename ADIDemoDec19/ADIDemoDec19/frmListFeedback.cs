@@ -23,6 +23,7 @@ namespace ADIDemoDec19
         {
             var data = db.Feedbacks.Select(d => 
                 new { FeedBackID = d.Id,
+                    AssessmentTitle = d.Assessment.assTitle,
                     d.Keywords,
                     d.Description,
                     FeedbackType = d.FeedbackType.fType,

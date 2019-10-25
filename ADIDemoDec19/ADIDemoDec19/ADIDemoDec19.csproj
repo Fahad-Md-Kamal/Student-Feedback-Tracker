@@ -172,6 +172,12 @@
     <Compile Include="frmListFeedback.Designer.cs">
       <DependentUpon>frmListFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListNote.Designer.cs">
+      <DependentUpon>frmListNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListFeedback.resx">
       <DependentUpon>frmListFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListNote.resx">
+      <DependentUpon>frmListNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListStaff.resx">
       <DependentUpon>frmListStaff.cs</DependentUpon>

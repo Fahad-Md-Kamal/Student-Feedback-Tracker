@@ -27,7 +27,7 @@ namespace ADIDemoDec19
         private void LoadAssList()
         {
             var stf = db.Assessments.Select(d =>
-                new { d.Id, d.assDate, d.Course.cName, d.User.uName, d.mark }).ToList();
+                new { d.Id, Title = d.assTitle, d.assDate, Course = d.Course.cName, Student = d.User.uName, d.mark }).ToList();
             gv.DataSource = stf;
         }
 

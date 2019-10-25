@@ -42,12 +42,16 @@
             this.cboCourse = new System.Windows.Forms.ComboBox();
             this.txtMark = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.txtTitle);
+            this.groupBox1.Controls.Add(this.lblTitle);
             this.groupBox1.Controls.Add(this.dtADate);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
@@ -63,14 +67,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 293);
+            this.groupBox1.Size = new System.Drawing.Size(405, 351);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Assessment Information";
             // 
             // dtADate
             // 
-            this.dtADate.Location = new System.Drawing.Point(134, 163);
+            this.dtADate.Location = new System.Drawing.Point(134, 223);
             this.dtADate.Name = "dtADate";
             this.dtADate.Size = new System.Drawing.Size(121, 20);
             this.dtADate.TabIndex = 30;
@@ -78,7 +82,7 @@
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(27, 161);
+            this.label6.Location = new System.Drawing.Point(27, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 23);
             this.label6.TabIndex = 29;
@@ -88,7 +92,7 @@
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(27, 126);
+            this.label4.Location = new System.Drawing.Point(27, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 27;
@@ -98,7 +102,7 @@
             // cboAss
             // 
             this.cboAss.FormattingEnabled = true;
-            this.cboAss.Location = new System.Drawing.Point(134, 126);
+            this.cboAss.Location = new System.Drawing.Point(134, 186);
             this.cboAss.Name = "cboAss";
             this.cboAss.Size = new System.Drawing.Size(121, 21);
             this.cboAss.TabIndex = 26;
@@ -106,7 +110,7 @@
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(27, 94);
+            this.label3.Location = new System.Drawing.Point(27, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 25;
@@ -116,7 +120,7 @@
             // cboGrade
             // 
             this.cboGrade.FormattingEnabled = true;
-            this.cboGrade.Location = new System.Drawing.Point(134, 94);
+            this.cboGrade.Location = new System.Drawing.Point(134, 154);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(121, 21);
             this.cboGrade.TabIndex = 24;
@@ -124,7 +128,7 @@
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(27, 60);
+            this.label2.Location = new System.Drawing.Point(27, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 23;
@@ -134,14 +138,14 @@
             // cboUser
             // 
             this.cboUser.FormattingEnabled = true;
-            this.cboUser.Location = new System.Drawing.Point(134, 60);
+            this.cboUser.Location = new System.Drawing.Point(134, 120);
             this.cboUser.Name = "cboUser";
             this.cboUser.Size = new System.Drawing.Size(121, 21);
             this.cboUser.TabIndex = 22;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(27, 237);
+            this.btnSubmit.Location = new System.Drawing.Point(27, 297);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 23);
             this.btnSubmit.TabIndex = 12;
@@ -152,7 +156,7 @@
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(27, 27);
+            this.label5.Location = new System.Drawing.Point(27, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 20;
@@ -162,14 +166,14 @@
             // cboCourse
             // 
             this.cboCourse.FormattingEnabled = true;
-            this.cboCourse.Location = new System.Drawing.Point(134, 27);
+            this.cboCourse.Location = new System.Drawing.Point(134, 87);
             this.cboCourse.Name = "cboCourse";
             this.cboCourse.Size = new System.Drawing.Size(121, 21);
             this.cboCourse.TabIndex = 19;
             // 
             // txtMark
             // 
-            this.txtMark.Location = new System.Drawing.Point(134, 195);
+            this.txtMark.Location = new System.Drawing.Point(134, 255);
             this.txtMark.Name = "txtMark";
             this.txtMark.Size = new System.Drawing.Size(121, 20);
             this.txtMark.TabIndex = 18;
@@ -177,18 +181,35 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(27, 193);
+            this.label1.Location = new System.Drawing.Point(27, 253);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 17;
             this.label1.Text = "Mark : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(134, 56);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtTitle.TabIndex = 32;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTitle.Location = new System.Drawing.Point(27, 54);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(100, 23);
+            this.lblTitle.TabIndex = 31;
+            this.lblTitle.Text = "Title : ";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmAssessment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 337);
+            this.ClientSize = new System.Drawing.Size(431, 429);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAssessment";
             this.Text = "frmAssessment";
@@ -215,5 +236,7 @@
         private System.Windows.Forms.ComboBox cboCourse;
         private System.Windows.Forms.TextBox txtMark;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
