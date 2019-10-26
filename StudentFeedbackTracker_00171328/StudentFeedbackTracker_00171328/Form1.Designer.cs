@@ -36,8 +36,8 @@
             this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assessmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subjectAssessmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.assessmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assessmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.noteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,89 +106,89 @@
             // courseToolStripMenuItem
             // 
             this.courseToolStripMenuItem.Name = "courseToolStripMenuItem";
-            this.courseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.courseToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.courseToolStripMenuItem.Text = "Course";
             this.courseToolStripMenuItem.Click += new System.EventHandler(this.courseToolStripMenuItem_Click);
             // 
             // subjectToolStripMenuItem
             // 
             this.subjectToolStripMenuItem.Name = "subjectToolStripMenuItem";
-            this.subjectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subjectToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.subjectToolStripMenuItem.Text = "Subject";
             this.subjectToolStripMenuItem.Click += new System.EventHandler(this.subjectToolStripMenuItem_Click);
             // 
             // registerUserToolStripMenuItem
             // 
             this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
-            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.registerUserToolStripMenuItem.Text = "Register Student";
             this.registerUserToolStripMenuItem.Click += new System.EventHandler(this.registerUserToolStripMenuItem_Click);
             // 
             // registerStaffToolStripMenuItem
             // 
             this.registerStaffToolStripMenuItem.Name = "registerStaffToolStripMenuItem";
-            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.registerStaffToolStripMenuItem.Text = "Register Staff";
             this.registerStaffToolStripMenuItem.Click += new System.EventHandler(this.registerStaffToolStripMenuItem_Click);
             // 
             // assessmentTypeToolStripMenuItem
             // 
             this.assessmentTypeToolStripMenuItem.Name = "assessmentTypeToolStripMenuItem";
-            this.assessmentTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.assessmentTypeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.assessmentTypeToolStripMenuItem.Text = "Assessment Type";
             this.assessmentTypeToolStripMenuItem.Click += new System.EventHandler(this.assessmentTypeToolStripMenuItem_Click);
             // 
             // subjectAssessmentToolStripMenuItem
             // 
             this.subjectAssessmentToolStripMenuItem.Name = "subjectAssessmentToolStripMenuItem";
-            this.subjectAssessmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subjectAssessmentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.subjectAssessmentToolStripMenuItem.Text = "Subject Assessment";
             this.subjectAssessmentToolStripMenuItem.Click += new System.EventHandler(this.subjectAssessmentToolStripMenuItem_Click);
-            // 
-            // assessmentToolStripMenuItem
-            // 
-            this.assessmentToolStripMenuItem.Name = "assessmentToolStripMenuItem";
-            this.assessmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.assessmentToolStripMenuItem.Text = "Assessment Detail";
-            this.assessmentToolStripMenuItem.Click += new System.EventHandler(this.assessmentToolStripMenuItem_Click);
             // 
             // gradeToolStripMenuItem
             // 
             this.gradeToolStripMenuItem.Name = "gradeToolStripMenuItem";
-            this.gradeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gradeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.gradeToolStripMenuItem.Text = "Grade";
             this.gradeToolStripMenuItem.Click += new System.EventHandler(this.gradeToolStripMenuItem_Click);
+            // 
+            // assessmentToolStripMenuItem
+            // 
+            this.assessmentToolStripMenuItem.Name = "assessmentToolStripMenuItem";
+            this.assessmentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.assessmentToolStripMenuItem.Text = "Assessment Detail";
+            this.assessmentToolStripMenuItem.Click += new System.EventHandler(this.assessmentToolStripMenuItem_Click);
             // 
             // feedbackTypeToolStripMenuItem
             // 
             this.feedbackTypeToolStripMenuItem.Name = "feedbackTypeToolStripMenuItem";
-            this.feedbackTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.feedbackTypeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.feedbackTypeToolStripMenuItem.Text = "Feedback Type";
             this.feedbackTypeToolStripMenuItem.Click += new System.EventHandler(this.feedbackTypeToolStripMenuItem_Click);
             // 
             // feedbackToolStripMenuItem
             // 
             this.feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.feedbackToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.feedbackToolStripMenuItem.Text = "Feedback";
             this.feedbackToolStripMenuItem.Click += new System.EventHandler(this.feedbackToolStripMenuItem_Click);
             // 
             // noteToolStripMenuItem
             // 
             this.noteToolStripMenuItem.Name = "noteToolStripMenuItem";
-            this.noteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noteToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.noteToolStripMenuItem.Text = "Note";
             this.noteToolStripMenuItem.Click += new System.EventHandler(this.noteToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(175, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -361,8 +361,9 @@
             // wordCloudToolStripMenuItem
             // 
             this.wordCloudToolStripMenuItem.Name = "wordCloudToolStripMenuItem";
-            this.wordCloudToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.wordCloudToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wordCloudToolStripMenuItem.Text = "Word Cloud";
+            this.wordCloudToolStripMenuItem.Click += new System.EventHandler(this.wordCloudToolStripMenuItem_Click);
             // 
             // barChartToolStripMenuItem
             // 

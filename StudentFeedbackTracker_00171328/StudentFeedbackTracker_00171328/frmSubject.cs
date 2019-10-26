@@ -31,18 +31,7 @@ namespace ADIDemoDec19
             cboCourse.DisplayMember = "cName";
             cboCourse.ValueMember = "Id";
 
-            cboCourse.SelectedIndex = 0;
-
-
-            var list = db.Subjects.Select(d =>
-                new { CourseId = d.Id, d.sName }).ToList();
-            gv.DataSource = list;
-
-            txtId.Text = "";
-            txtName.Text = "";
-
-
-    }
+        }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -52,11 +41,9 @@ namespace ADIDemoDec19
             };
             db.Subjects.Add(sub);
             db.SaveChanges();
-            LoadCourseData();
 
-            MessageBox.Show("Subject Created Successfully ...");
+            MessageBox.Show("Data Inserted Successfully ...");
 
         }
-
     }
 }

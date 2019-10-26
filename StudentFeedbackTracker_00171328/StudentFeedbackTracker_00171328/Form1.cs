@@ -47,11 +47,40 @@ namespace ADIDemoDec19
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //if (Tools.UserType != "Admin")
-            //{
-            //    courseToolStripMenuItem.Visible = false;
-            //    subjectToolStripMenuItem.Visible = false;
-            //}
+            if (Tools.UserType == "STUDENT")
+            {
+                courseToolStripMenuItem.Visible = false;
+                registerUserToolStripMenuItem.Visible = false;
+                registerStaffToolStripMenuItem.Visible = false;
+                changeUserTypeToolStripMenuItem.Visible = false;
+                allUserInformationToolStripMenuItem.Visible = false;
+                assessmentTypeToolStripMenuItem.Visible = false;
+                allStudentInformationToolStripMenuItem.Visible = false;
+                allUserTypeInformationToolStripMenuItem.Visible = false;
+                allAssessmentInformationToolStripMenuItem.Visible = false;
+                allAssessmentTypesToolStripMenuItem.Visible = false;
+                subjectAssessmentToolStripMenuItem.Visible = false;
+                allAssessmentSubjectToolStripMenuItem.Visible = false;
+                assessmentToolStripMenuItem.Visible = false;
+                gradeToolStripMenuItem.Visible = false;
+                feedbackToolStripMenuItem.Visible = false;
+                feedbackTypeToolStripMenuItem.Visible = false;
+                allFeedbacksToolStripMenuItem.Visible = false;
+                barChartToolStripMenuItem.Visible = false;
+                wordCloudToolStripMenuItem.Visible = false;
+            }
+            else if (Tools.UserType == "STAFF")
+            {
+
+                courseToolStripMenuItem.Visible = false;
+                registerUserToolStripMenuItem.Visible = false;
+                registerStaffToolStripMenuItem.Visible = false;
+                changeUserTypeToolStripMenuItem.Visible = false;
+                allUserInformationToolStripMenuItem.Visible = false;
+                allUserTypeInformationToolStripMenuItem.Visible = false;
+                gradeToolStripMenuItem.Visible = false;
+            }
+
         }
 
         private void registerUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,12 +90,14 @@ namespace ADIDemoDec19
             frm.Show();
         }
 
+
         private void registerStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmStaffRegister frm = new frmStaffRegister();
             frm.MdiParent = this;
             frm.Show();
         }
+
 
         private void changeUserTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -82,6 +113,7 @@ namespace ADIDemoDec19
             frm.Show();
         }
 
+
         private void changeUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChangeUserInfo frm = new frmChangeUserInfo();
@@ -96,12 +128,15 @@ namespace ADIDemoDec19
             frm.Show();
         }
 
+
         private void allStudentInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListStudent frm = new frmListStudent();
             frm.MdiParent = this;
             frm.Show();
         }
+
+
 
         private void allStaffInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,6 +194,10 @@ namespace ADIDemoDec19
             frm.Show();
         }
 
+
+
+
+
         private void subjectAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -167,12 +206,15 @@ namespace ADIDemoDec19
             frm.Show();
         }
 
+
+
         private void allAssessmentSubjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListSubjectAss frm = new frmListSubjectAss();
             frm.MdiParent = this;
             frm.Show();
         }
+
 
         private void assessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -194,6 +236,7 @@ namespace ADIDemoDec19
             frm.MdiParent = this;
             frm.Show();
         }
+
 
         private void feedbackTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -228,6 +271,11 @@ namespace ADIDemoDec19
             frmListNote frm = new frmListNote();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void wordCloudToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
