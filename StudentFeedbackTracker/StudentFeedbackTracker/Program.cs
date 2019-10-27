@@ -17,7 +17,7 @@ namespace StudentFeedbackTracker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUserRegister());
+            Application.Run(new Form1());
             //Application.Run(new frmUserRole());
         }
     }

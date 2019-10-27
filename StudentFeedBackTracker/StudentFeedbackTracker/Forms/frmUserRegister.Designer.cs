@@ -30,6 +30,7 @@
         {
             this.gxfrm = new System.Windows.Forms.GroupBox();
             this.cmbRoles = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.RoleType = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.dtp = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -52,8 +54,8 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.btnsearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblClose = new System.Windows.Forms.Label();
             this.gxfrm.SuspendLayout();
             this.gxList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -61,6 +63,7 @@
             // 
             // gxfrm
             // 
+            this.gxfrm.Controls.Add(this.lblClose);
             this.gxfrm.Controls.Add(this.cmbRoles);
             this.gxfrm.Controls.Add(this.lblId);
             this.gxfrm.Controls.Add(this.lblEmail);
@@ -70,6 +73,7 @@
             this.gxfrm.Controls.Add(this.txtUsername);
             this.gxfrm.Controls.Add(this.btnUpdate);
             this.gxfrm.Controls.Add(this.lblFirstName);
+            this.gxfrm.Controls.Add(this.btnAdd);
             this.gxfrm.Controls.Add(this.btnSubmit);
             this.gxfrm.Controls.Add(this.txtFirstName);
             this.gxfrm.Controls.Add(this.dtp);
@@ -89,6 +93,7 @@
             this.gxfrm.Size = new System.Drawing.Size(719, 702);
             this.gxfrm.TabIndex = 999;
             this.gxfrm.TabStop = false;
+            this.gxfrm.Text = "User Registration Form";
             // 
             // cmbRoles
             // 
@@ -98,6 +103,16 @@
             this.cmbRoles.Name = "cmbRoles";
             this.cmbRoles.Size = new System.Drawing.Size(205, 27);
             this.cmbRoles.TabIndex = 6;
+            // 
+            // lblId
+            // 
+            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblId.Location = new System.Drawing.Point(131, 57);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(144, 23);
+            this.lblId.TabIndex = 1002;
+            this.lblId.Text = "Id:";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblEmail
             // 
@@ -211,6 +226,14 @@
             this.dtp.Size = new System.Drawing.Size(200, 26);
             this.dtp.TabIndex = 4;
             // 
+            // txtId
+            // 
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtId.Location = new System.Drawing.Point(318, 57);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(206, 26);
+            this.txtId.TabIndex = 0;
+            // 
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -301,7 +324,6 @@
             this.gxList.Size = new System.Drawing.Size(558, 702);
             this.gxList.TabIndex = 0;
             this.gxList.TabStop = false;
-            this.gxList.Text = "User Registration Form";
             this.gxList.Enter += new System.EventHandler(this.gbxForm_Enter);
             // 
             // dgv
@@ -337,23 +359,33 @@
             this.txtSearch.Size = new System.Drawing.Size(552, 26);
             this.txtSearch.TabIndex = 0;
             // 
-            // txtId
+            // btnAdd
             // 
-            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtId.Location = new System.Drawing.Point(318, 57);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(206, 26);
-            this.txtId.TabIndex = 0;
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Location = new System.Drawing.Point(553, 408);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(80, 31);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "+ Role";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // lblId
+            // lblClose
             // 
-            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblId.Location = new System.Drawing.Point(131, 57);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(144, 23);
-            this.lblId.TabIndex = 1002;
-            this.lblId.Text = "Id:";
-            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblClose.BackColor = System.Drawing.Color.Maroon;
+            this.lblClose.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblClose.ForeColor = System.Drawing.Color.White;
+            this.lblClose.Location = new System.Drawing.Point(692, 9);
+            this.lblClose.Name = "lblClose";
+            this.lblClose.Size = new System.Drawing.Size(27, 27);
+            this.lblClose.TabIndex = 1017;
+            this.lblClose.Text = "X";
+            this.lblClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblClose.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmUserRegister
             // 
@@ -363,6 +395,7 @@
             this.ClientSize = new System.Drawing.Size(1277, 702);
             this.Controls.Add(this.gxList);
             this.Controls.Add(this.gxfrm);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUserRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUserRegister";
@@ -403,5 +436,7 @@
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblClose;
     }
 }

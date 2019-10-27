@@ -13,7 +13,7 @@ namespace StudentFeedbackTracker.Models
 
         public int TotalCredit { get; set; }
 
-        public ICollection<Staff> Students { get; set; }
-        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<CourseStudent> Students { get; set; }
+        public ICollection<CourseSubject> Subjects { get; set; }
     }
 }

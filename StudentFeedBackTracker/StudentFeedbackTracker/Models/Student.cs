@@ -14,5 +14,6 @@ namespace StudentFeedbackTracker.Models
 
         public ICollection<Course> Courses { get; set; }
         public ICollection<Note> Notes { get; set; }
+        public ICollection<Assessment> Assessments { get; set; }
     }
 }

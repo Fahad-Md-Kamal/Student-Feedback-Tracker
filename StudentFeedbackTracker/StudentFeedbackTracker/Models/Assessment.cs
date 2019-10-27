@@ -25,6 +25,7 @@ namespace StudentFeedbackTracker.Models
         public int AssessmentTypeId { get; set; }
         public AssessmentType AssessmentType { get; set; }
 
+        public ICollection<Student> Students { get; set; }
         public ICollection<Feedback> Feedbacks { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace StudentFeedbackTracker.Models
         public int Salary { get; set; }
 
 
-        public ICollection<Subject> Subjects { get; set; }
+        public ICollection<SubjectStaff> Subjects { get; set; }
         public ICollection<Assessment> Assessments { get; set; }
     }
 }

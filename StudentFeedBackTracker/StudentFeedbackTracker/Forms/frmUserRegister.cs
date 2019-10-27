@@ -185,5 +185,16 @@ namespace StudentFeedbackTracker.Forms
                 txtId.Visible = true;
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmUserRole frm = new frmUserRole();
+            frm.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

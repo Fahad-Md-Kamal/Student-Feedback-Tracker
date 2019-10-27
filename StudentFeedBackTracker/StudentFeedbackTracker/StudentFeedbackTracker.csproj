@@ -76,6 +76,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCourse.Designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSubjects.Designer.cs">
+      <DependentUpon>frmSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmUserRegister.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -90,15 +102,17 @@
     <Compile Include="Forms\frmUserRole.Designer.cs">
       <DependentUpon>frmUserRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910271643089_Init.cs" />
-    <Compile Include="Migrations\201910271643089_Init.designer.cs">
-      <DependentUpon>201910271643089_Init.cs</DependentUpon>
+    <Compile Include="Helper\Helpers.cs" />
+    <Compile Include="Migrations\201910271929472_init.cs" />
+    <Compile Include="Migrations\201910271929472_init.designer.cs">
+      <DependentUpon>201910271929472_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="Models\Assessment.cs" />
     <Compile Include="Models\AssessmentType.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\CourseSubject.cs" />
     <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\FeedbackType.cs" />
     <Compile Include="Models\Note.cs" />
@@ -109,6 +123,15 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSubjects.resx">
+      <DependentUpon>frmSubjects.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUserRegister.resx">
       <DependentUpon>frmUserRegister.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -116,8 +139,8 @@
     <EmbeddedResource Include="Forms\frmUserRole.resx">
       <DependentUpon>frmUserRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910271643089_Init.resx">
-      <DependentUpon>201910271643089_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910271929472_init.resx">
+      <DependentUpon>201910271929472_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

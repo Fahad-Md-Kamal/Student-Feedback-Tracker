@@ -24,6 +24,26 @@ namespace StudentFeedbackTracker
         public DbSet<User> Users { get; set; }
         public DbSet<Subject> Subjects { get; set; }
 
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            //modelBuilder.Entity<Course>()
+            // .HasMany(e => e.Student)
+            // .WithMany(e => e.Courses)
+            // .Map(m =>
+            // {
+            //     m.ToTable("CourseStudents");
+            //     m.MapLeftKey("CourseID");
+            //     m.MapRightKey("ProID");
+            // }
+            //);
+
+        }
+
     }
 }
 
