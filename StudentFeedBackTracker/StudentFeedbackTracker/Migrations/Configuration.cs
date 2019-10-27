@@ -1,18 +1,18 @@
-﻿namespace StudnetFeedbackTracker.Migrations
+﻿namespace StudentFeedbackTracker.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<StudnetFeedbackTracker.AppContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<StudentFeedbackTracker.ModelContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(StudnetFeedbackTracker.AppContext context)
+        protected override void Seed(StudentFeedbackTracker.ModelContext context)
         {
             //  This method will be called after migrating to the latest version.
 

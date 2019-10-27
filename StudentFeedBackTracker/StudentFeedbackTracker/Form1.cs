@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudnetFeedbackTracker.Forms
+namespace StudentFeedbackTracker
 {
-    public partial class frmUserSignup : Form
+    public partial class Form1 : Form
     {
-        public frmUserSignup()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void frmUserSignup_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

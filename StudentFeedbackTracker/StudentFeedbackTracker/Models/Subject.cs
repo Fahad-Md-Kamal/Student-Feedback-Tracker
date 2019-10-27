@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace StudnetFeedbackTracker.Models
+namespace StudentFeedbackTracker.Models
 {
     public class Subject
     {
+        [Key]
         public int Id { get; set; }
+        [StringLength(50)]
         public string SubjectName { get; set; }
 
-        public virtual User Staff { get; set; }
-        public virtual List<CouseSubject> Courses { get; set; }
+        public int Credit { get; set; }
 
-
-        void AddModule() { }
-        void UpdateModule() { }
-        void DeleteModule() { }
-
-
-        public void AssignStaffToSubject() { }
-
+        public IList<Staff> Staffs { get; set; }
+        public IList<Course> Courses { get; set; }
+        public IList<Assessment> Assessments { get; set; }
     }
 }

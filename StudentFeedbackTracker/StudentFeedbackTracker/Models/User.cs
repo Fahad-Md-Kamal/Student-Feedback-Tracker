@@ -1,40 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StudnetFeedbackTracker.Models
+namespace StudentFeedbackTracker.Models
 {
     public abstract class User
     {
         [Key]
         public int Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(250)]
         public string Username { get; set; }
 
-        [StringLength(50)]
+        [StringLength(200)]
+        public string Email { get; set; }
+
+        [StringLength(20)]
+        public byte[] Password { get; set; }
+
+        public DateTime DoB { get; set; }
+
+        [StringLength(250)]
         public string FirstName { get; set; }
 
-        [StringLength(150)]
+        [StringLength(250)]
         public string LastName { get; set; }
 
         [StringLength(250)]
-        public string Email { get; set; }
-
-        [StringLength(250)]
-        public string Password { get; set; }
-        public string JoinDate { get; set; }
-
-        //public virtual UserType UserType { get; set; }
+        public string Address { get; set; }
 
 
-        public void UpdateUserInfo() { }
-        void AddUser() { }
-        void UpdateUser() { }
-        void DeleteUser() { }
+        public virtual Role Role { get; set; }
 
     }
 }

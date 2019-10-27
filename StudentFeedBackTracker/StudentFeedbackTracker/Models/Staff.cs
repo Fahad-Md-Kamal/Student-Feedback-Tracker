@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace StudnetFeedbackTracker.Models
+namespace StudentFeedbackTracker.Models
 {
-    public class Staff
+    public class Staff : User
     {
-        public virtual IList<Assessment> Assessments { get; set; }
-        public virtual IList<Course> StaffsCourses { get; set; }
+        [Key]
+        public int StaffId { get; set; }
+
+
+        public IList<Subject> Subjects { get; set; }
+        public IList<Assessment> Assessments { get; set; }
     }
 }

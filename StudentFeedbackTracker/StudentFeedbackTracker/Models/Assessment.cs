@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StudnetFeedbackTracker.Models
+namespace StudentFeedbackTracker.Models
 {
     public class Assessment
     {
@@ -13,20 +10,15 @@ namespace StudnetFeedbackTracker.Models
         public int Id { get; set; }
 
         [StringLength(250)]
-        public string AssessmentDetail { get; set; }
+        public string Detail { get; set; }
+
         public DateTime CreationDate { get; set; }
-        public DateTime SubmissionDate { get; set; }
+
         public int Score { get; set; }
 
-        public virtual AssessmentType AssessmentType { get; set; }
-
-        public virtual IList<Student> Students { get; set; }
-        public virtual Staff Staff { get; set; }
-
-        public void AddAssessement() { } // Admin, Staff
-        public void UpdateAssessement() { } // Admi, Staff
-        public void DeleteAssessement() { } // Admin, Staff
-        void SeeGradesBreakdown() { } // Staff ====================        Bar Chart
-
+        public Subject Subject { get; set; }
+        public Staff Staff { get; set; }
+        public AssessmentType AssessmentType { get; set; }
+        public IList<Feedback> Feedbacks { get; set; }
     }
 }

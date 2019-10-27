@@ -2,12 +2,14 @@
 
 namespace StudentFeedbackTracker.Models
 {
-    public class AssessmentType
+    public class Note
     {
         [Key]
         public int Id { get; set; }
 
-        [StringLength(20)]
-        public string AssessementType { get; set; }
+        [StringLength(250)]
+        public string Details { get; set; }
+
+        public Student Student { get; set; }
     }
 }

@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace StudentFeedbackTracker.Models
 {
-    public class Student : User
+    public class Role
     {
         [Key]
-        public int StudentId { get; set; }
+        public int Id { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
-        public ICollection<Note> Notes { get; set; }
+        [StringLength(20)]
+        public string RoleName { get; set; }
+
+        public IList<User> Users { get; set; }
     }
 }

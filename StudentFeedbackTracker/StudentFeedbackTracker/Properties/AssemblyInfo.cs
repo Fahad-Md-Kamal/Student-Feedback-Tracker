@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FrmDashBoard")]
+[assembly: AssemblyTitle("StudentFeedbackTracker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FrmDashBoard")]
+[assembly: AssemblyProduct("StudentFeedbackTracker")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e03ebd66-7ee1-4b54-8873-b319b5fcc32d")]
+[assembly: Guid("eeb547c1-6efc-4ca0-bd93-af16d151e4e2")]
 
 // Version information for an assembly consists of the following four values:
 //

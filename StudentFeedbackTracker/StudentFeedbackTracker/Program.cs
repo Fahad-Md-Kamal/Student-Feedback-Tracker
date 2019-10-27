@@ -1,11 +1,11 @@
-﻿using StudnetFeedbackTracker.Forms;
+﻿using StudentFeedbackTracker.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrmDashBoard
+namespace StudentFeedbackTracker
 {
     static class Program
     {
@@ -17,7 +17,8 @@ namespace FrmDashBoard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAssessmentManage());
+            Application.Run(new frmUserRegister());
+            //Application.Run(new frmUserRole());
         }
     }
 }
