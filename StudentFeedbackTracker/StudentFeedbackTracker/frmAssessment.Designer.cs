@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.dtADate = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.cboCourse = new System.Windows.Forms.ComboBox();
             this.txtMark = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,23 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Assessment Information";
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(134, 56);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(121, 20);
+            this.txtTitle.TabIndex = 32;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblTitle.Location = new System.Drawing.Point(27, 54);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(100, 23);
+            this.lblTitle.TabIndex = 31;
+            this.lblTitle.Text = "Title : ";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtADate
             // 
@@ -132,7 +149,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 23;
-            this.label2.Text = "User : ";
+            this.label2.Text = "Staff : ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboUser
@@ -187,23 +204,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Mark : ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(134, 56);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(121, 20);
-            this.txtTitle.TabIndex = 32;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTitle.Location = new System.Drawing.Point(27, 54);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(100, 23);
-            this.lblTitle.TabIndex = 31;
-            this.lblTitle.Text = "Title : ";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmAssessment
             // 

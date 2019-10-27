@@ -27,9 +27,9 @@ namespace ADIDemoDec19
             cboCourse.DisplayMember = "cName";
             cboCourse.ValueMember = "Id";
 
-            var student = db.Users.Where(d=> d.UserType.Id == 2).ToList();
+            var staff = db.Users.Where(d=> d.UserType.Id == 3).ToList();
 
-            cboUser.DataSource = student;
+            cboUser.DataSource = staff;
             cboUser.DisplayMember = "uName";
             cboUser.ValueMember = "Id";
 
