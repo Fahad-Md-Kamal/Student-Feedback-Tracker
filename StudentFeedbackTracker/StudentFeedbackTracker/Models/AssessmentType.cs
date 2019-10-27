@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentFeedbackTracker.Models
 {
@@ -9,5 +10,6 @@ namespace StudentFeedbackTracker.Models
 
         [StringLength(20)]
         public string AssessementType { get; set; }
+        public ICollection<Assessment>  Assessments { get; set; }
     }
 }

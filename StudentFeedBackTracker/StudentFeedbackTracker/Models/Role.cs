@@ -15,6 +15,6 @@ namespace StudentFeedbackTracker.Models
         [StringLength(20)]
         public string RoleName { get; set; }
 
-        public IList<User> Users { get; set; }
+        public ICollection<User> Users { get; set; }
     }
 }

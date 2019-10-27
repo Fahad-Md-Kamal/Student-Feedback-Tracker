@@ -10,6 +10,7 @@ namespace StudentFeedbackTracker.Models
         [StringLength(250)]
         public string Details { get; set; }
 
+        public int StudentId { get; set; }
         public Student Student { get; set; }
     }
 }

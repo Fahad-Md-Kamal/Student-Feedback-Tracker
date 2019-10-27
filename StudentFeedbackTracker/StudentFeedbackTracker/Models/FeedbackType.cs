@@ -11,6 +11,6 @@ namespace StudentFeedbackTracker.Models
         [StringLength(20)]
         public string FeedbackTypeName { get; set; }
 
-        public IList<Feedback> Feedbacks { get; set; }
+        public ICollection<Feedback> Feedbacks { get; set; }
     }
 }

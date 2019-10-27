@@ -90,6 +90,10 @@
     <Compile Include="Forms\frmUserRole.Designer.cs">
       <DependentUpon>frmUserRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910271643089_Init.cs" />
+    <Compile Include="Migrations\201910271643089_Init.designer.cs">
+      <DependentUpon>201910271643089_Init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="Models\Assessment.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUserRole.resx">
       <DependentUpon>frmUserRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910271643089_Init.resx">
+      <DependentUpon>201910271643089_Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

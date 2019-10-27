@@ -16,9 +16,15 @@ namespace StudentFeedbackTracker.Models
 
         public int Score { get; set; }
 
+        public int SubjectId { get; set; }
         public Subject Subject { get; set; }
+
+        public int StaffId { get; set; }
         public Staff Staff { get; set; }
+
+        public int AssessmentTypeId { get; set; }
         public AssessmentType AssessmentType { get; set; }
-        public IList<Feedback> Feedbacks { get; set; }
+
+        public ICollection<Feedback> Feedbacks { get; set; }
     }
 }

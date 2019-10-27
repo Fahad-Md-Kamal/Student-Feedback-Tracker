@@ -15,7 +15,7 @@ namespace StudentFeedbackTracker.Models
         public string Email { get; set; }
 
         [StringLength(20)]
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
 
         public DateTime DoB { get; set; }
 
@@ -28,7 +28,7 @@ namespace StudentFeedbackTracker.Models
         [StringLength(250)]
         public string Address { get; set; }
 
-
+        public int RoleId { get; set; }
         public virtual Role Role { get; set; }
 
     }
