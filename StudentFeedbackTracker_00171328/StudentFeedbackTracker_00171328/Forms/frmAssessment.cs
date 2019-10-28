@@ -90,12 +90,49 @@ namespace StudentFeedbackTracker_00171328
             gv.DataSource = db.Assessments.Select(d =>
                 new { d.Id,
                     Title = d.assTitle,
-                   AssessmaneDate = d.assDate,
-                   Course = d.Course.cName,
-                   Student = d.User.uName, d.mark
+                    AssessmaneDate = d.assDate,
+                    Course = d.Course.cName,
+                    Staff = d.User.uName,
+                    Grade = d.Grade.gradeSign,
+                    AssessmentType = d.AssessmentType.assType,
+                    Score = d.mark
                 }).ToList();
+
+
+
+
+
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = gv.Rows[e.RowIndex];
+                txtID.Text = row.Cells[0].Value.ToString();
+                txtTitle.Text = row.Cells[1].Value.ToString();
+                dtADate.Value = DateTime.Parse(row.Cells[2].Value.ToString());
+
+
+                cboCourse.SelectedItem = row.Cells[3].Value.ToString();
+                //cboUser.SelectedItem = row.Cells[4].FormattedValue.ToString();
+                //cboGrade.SelectedValue = row.Cells[5].Value;
+                //cboAss.SelectedValue = row.Cells[6].Value;
+
+                txtMark.Text = row.Cells[7].Value.ToString();
+
+                btnDelete.Visible = true;
+                btnUpdate.Visible = true;
+                lblId.Visible = true;
+                txtID.Visible = true;
+            }
+        }
     }
 }
