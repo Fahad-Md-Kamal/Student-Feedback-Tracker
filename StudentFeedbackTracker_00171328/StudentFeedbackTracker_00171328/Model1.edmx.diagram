@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a140c50dfe354bfc872789f61670d3be" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="DatabaseModel.Assessment" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.AssessmentType" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Course" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Feedback" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.FeedbackType" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Grade" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Note" Width="1.5" PointX="12.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Staff" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Student" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.StudentCourse" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Subject" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.SubjectAssessment" Width="1.5" PointX="10.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.User" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.UserType" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.WordCloud" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_Assessment_ToAssess" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Assessment_ToCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Assessment_ToGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Assessment_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Feedback_ToAssess" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_SubjectAssessment_ToAssess" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Student_ToCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_StudentCourse_ToCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Subject_ToCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Feedback_ToFeedbackType" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Note_ToFeedback" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.tblWCount" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Note_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Staff_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Student_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_StudentCourse_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_SubjectAssessment_ToSubject" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_User_ToUserType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
