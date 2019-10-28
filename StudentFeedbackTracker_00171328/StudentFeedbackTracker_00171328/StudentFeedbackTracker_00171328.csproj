@@ -94,16 +94,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAssesmentType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAssesmentType.Designer.cs">
       <DependentUpon>frmAssesmentType.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAssessment.cs">
+    <Compile Include="Forms\frmAssessment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAssessment.Designer.cs">
+    <Compile Include="Forms\frmAssessment.Designer.cs">
       <DependentUpon>frmAssessment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBarChart.cs">
@@ -178,12 +184,6 @@
     <Compile Include="frmListNote.Designer.cs">
       <DependentUpon>frmListNote.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListStaff.Designer.cs">
-      <DependentUpon>frmListStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmListStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,16 +214,16 @@
     <Compile Include="frmNote.Designer.cs">
       <DependentUpon>frmNote.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaffRegister.cs">
+    <Compile Include="Forms\frmStaffRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaffRegister.Designer.cs">
+    <Compile Include="Forms\frmStaffRegister.Designer.cs">
       <DependentUpon>frmStaffRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStudentRegister.cs">
+    <Compile Include="Forms\frmStudentRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStudentRegister.Designer.cs">
+    <Compile Include="Forms\frmStudentRegister.Designer.cs">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSubject.cs">
@@ -259,6 +259,7 @@
     <Compile Include="Grade.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PanelFormLoader.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -307,10 +308,13 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAssesmentType.resx">
       <DependentUpon>frmAssesmentType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAssessment.resx">
+    <EmbeddedResource Include="Forms\frmAssessment.resx">
       <DependentUpon>frmAssessment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBarChart.resx">
@@ -349,9 +353,6 @@
     <EmbeddedResource Include="frmListNote.resx">
       <DependentUpon>frmListNote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListStaff.resx">
-      <DependentUpon>frmListStaff.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmListStudent.resx">
       <DependentUpon>frmListStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,10 +368,10 @@
     <EmbeddedResource Include="frmNote.resx">
       <DependentUpon>frmNote.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaffRegister.resx">
+    <EmbeddedResource Include="Forms\frmStaffRegister.resx">
       <DependentUpon>frmStaffRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStudentRegister.resx">
+    <EmbeddedResource Include="Forms\frmStudentRegister.resx">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubject.resx">
@@ -423,10 +424,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Model1.Context.tt">
@@ -455,6 +456,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

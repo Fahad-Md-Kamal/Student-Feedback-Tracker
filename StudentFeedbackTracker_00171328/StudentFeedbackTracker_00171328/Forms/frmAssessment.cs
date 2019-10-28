@@ -18,6 +18,7 @@ namespace StudentFeedbackTracker_00171328
         public frmAssessment()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void frmAssessment_Load(object sender, EventArgs e)
@@ -63,6 +64,38 @@ namespace StudentFeedbackTracker_00171328
             db.SaveChanges();
 
             MessageBox.Show("Success");
+            LoadData();
         }
+
+        private void btnCourse_Click(object sender, EventArgs e)
+        {
+            frmCourse frm = new frmCourse();
+            frm.Show();
+        }
+
+        private void btnGrade_Click(object sender, EventArgs e)
+        {
+            frmGrade frm = new frmGrade();
+            frm.Show();
+        }
+
+        private void btnAssType_Click(object sender, EventArgs e)
+        {
+            frmAssesmentType frm = new frmAssesmentType();
+            frm.Show();
+        }
+
+        private void LoadData()
+        {
+            gv.DataSource = db.Assessments.Select(d =>
+                new { d.Id,
+                    Title = d.assTitle,
+                   AssessmaneDate = d.assDate,
+                   Course = d.Course.cName,
+                   Student = d.User.uName, d.mark
+                }).ToList();
+        }
+
+
     }
 }
