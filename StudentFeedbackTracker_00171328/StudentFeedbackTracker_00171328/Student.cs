@@ -12,16 +12,9 @@ namespace StudentFeedbackTracker_00171328
     using System;
     using System.Collections.Generic;
     
-    public partial class Student
+    public partial class Student : Person
     {
-        public int Id { get; set; }
-        public string fName { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> DOB { get; set; }
-        public string Email { get; set; }
         public string RollNo { get; set; }
-        public Nullable<int> cId { get; set; }
-        public Nullable<int> uId { get; set; }
     
         public virtual Course Course { get; set; }
         public virtual User User { get; set; }

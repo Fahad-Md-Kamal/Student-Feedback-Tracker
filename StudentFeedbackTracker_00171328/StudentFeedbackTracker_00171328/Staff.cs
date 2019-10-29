@@ -12,16 +12,10 @@ namespace StudentFeedbackTracker_00171328
     using System;
     using System.Collections.Generic;
     
-    public partial class Staff
+    public partial class Staff : Person
     {
-        public int Id { get; set; }
-        public string fName { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> DOB { get; set; }
-        public string Email { get; set; }
         public Nullable<decimal> Salary { get; set; }
-        public Nullable<int> uId { get; set; }
-    
+
         public virtual User User { get; set; }
     }
 }
