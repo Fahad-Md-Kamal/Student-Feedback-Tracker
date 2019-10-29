@@ -17,11 +17,7 @@ namespace StudentFeedbackTracker_00171328
         {
             InitializeComponent();
         }
-
-        private void frmAssesmentType_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnInsert_Click(object sender, EventArgs e)
         {

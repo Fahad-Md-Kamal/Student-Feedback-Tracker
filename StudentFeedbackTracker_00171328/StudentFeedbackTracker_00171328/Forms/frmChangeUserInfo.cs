@@ -17,6 +17,9 @@ namespace StudentFeedbackTracker_00171328
         public frmChangeUserInfo()
         {
             InitializeComponent();
+
+            lblPageFitle.Text = Tools.UserName;
+
         }
 
         private void frmChangeUserInfo_Load(object sender, EventArgs e)
@@ -39,11 +42,12 @@ namespace StudentFeedbackTracker_00171328
                 data.uPass = txtPass.Text;
             
                 db.SaveChanges();
-                MessageBox.Show("Success");
+                MessageBox.Show("Password Changed Successfully", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
             }
             else
             {
-                MessageBox.Show("Not Found !!!");
+                MessageBox.Show("Not Found !!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

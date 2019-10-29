@@ -159,6 +159,7 @@
             this.Controls.Add(this.GvStudentList);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCourse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCourse";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

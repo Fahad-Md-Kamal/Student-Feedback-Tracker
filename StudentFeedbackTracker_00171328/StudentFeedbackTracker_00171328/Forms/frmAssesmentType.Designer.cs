@@ -100,8 +100,8 @@
             this.ClientSize = new System.Drawing.Size(312, 155);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAssesmentType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAssesmentType";
-            this.Load += new System.EventHandler(this.frmAssesmentType_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

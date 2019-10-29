@@ -101,6 +101,7 @@
             this.ClientSize = new System.Drawing.Size(314, 236);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmSubject";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subject Info";
             this.Load += new System.EventHandler(this.frmSubject_Load);
             this.groupBox2.ResumeLayout(false);

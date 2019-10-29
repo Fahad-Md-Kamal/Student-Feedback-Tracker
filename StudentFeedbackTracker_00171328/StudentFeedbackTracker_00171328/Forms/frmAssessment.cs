@@ -22,6 +22,23 @@ namespace StudentFeedbackTracker_00171328
             LoadData();
         }
 
+        public void LoadData()
+        {
+            gv.DataSource = db.Assessments.Select(d =>
+                new {
+                    d.Id,
+                    Title = d.assTitle,
+                    AssessmaneDate = d.assDate,
+                    Course = d.Course.cName,
+                    Staff = d.User.uName,
+                    Grade = d.Grade.gradeSign,
+                    AssessmentType = d.AssessmentType.assType,
+                    Score = d.mark
+                }).ToList();
+
+            Helper.SetNullTxtBx(groupBox1);
+        }
+
         private void frmAssessment_Load(object sender, EventArgs e)
         {
             var data = db.Courses.ToList();
@@ -64,40 +81,8 @@ namespace StudentFeedbackTracker_00171328
             db.Assessments.Add(ass);
             db.SaveChanges();
 
-            MessageBox.Show("Success");
+            MessageBox.Show("Assessemnt Creaeted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadData();
-        }
-
-        private void btnCourse_Click(object sender, EventArgs e)
-        {
-            frmCourse frm = new frmCourse();
-            frm.Show();
-        }
-
-        private void btnGrade_Click(object sender, EventArgs e)
-        {
-            frmGrade frm = new frmGrade();
-            frm.Show();
-        }
-
-        private void btnAssType_Click(object sender, EventArgs e)
-        {
-            frmAssesmentType frm = new frmAssesmentType();
-            frm.Show();
-        }
-
-        public void LoadData()
-        {
-            gv.DataSource = db.Assessments.Select(d =>
-                new { d.Id,
-                    Title = d.assTitle,
-                    AssessmaneDate = d.assDate,
-                    Course = d.Course.cName,
-                    Staff = d.User.uName,
-                    Grade = d.Grade.gradeSign,
-                    AssessmentType = d.AssessmentType.assType,
-                    Score = d.mark
-                }).ToList();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -174,6 +159,24 @@ namespace StudentFeedbackTracker_00171328
                 x.Title.ToLower()
                 .Contains(txtSearch.Text.ToLower()))
                 .ToList();
+        }
+
+        private void btnCourse_Click(object sender, EventArgs e)
+        {
+            frmCourse frm = new frmCourse();
+            frm.Show();
+        }
+
+        private void btnGrade_Click(object sender, EventArgs e)
+        {
+            frmGrade frm = new frmGrade();
+            frm.Show();
+        }
+
+        private void btnAssType_Click(object sender, EventArgs e)
+        {
+            frmAssesmentType frm = new frmAssesmentType();
+            frm.Show();
         }
     }
 }

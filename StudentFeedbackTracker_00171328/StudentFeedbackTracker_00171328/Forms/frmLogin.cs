@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentFeedbackTracker_00171328.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace StudentFeedbackTracker_00171328
         public frmLogin()
         {
             InitializeComponent();
+            this.Text = "User Login";
         }
 
         private void btnLog_Click(object sender, EventArgs e)
@@ -25,12 +27,11 @@ namespace StudentFeedbackTracker_00171328
             if (data != null)
             {
                 Tools.UserType = data.UserType.tName;
-                //MessageBox.Show("Welcome "+ Tools.UserType);
                 Tools.UserId = data.Id;
                 Tools.UserName = data.uName;
 
                 this.Hide();
-                Form1 frm = new StudentFeedbackTracker_00171328.Form1();
+                frmAdmin frm = new frmAdmin();
                 frm.Text = "Welcome " + Tools.UserType;
                 frm.Show();
             }

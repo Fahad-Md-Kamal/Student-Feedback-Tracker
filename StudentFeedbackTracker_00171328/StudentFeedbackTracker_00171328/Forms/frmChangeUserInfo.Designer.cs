@@ -37,15 +37,19 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtUName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPageFitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(16, 196);
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(309, 220);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(100, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(100, 35);
             this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Change";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -55,6 +59,7 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(119, 85);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(223, 20);
             this.txtPass.TabIndex = 22;
             // 
@@ -70,6 +75,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtId);
@@ -77,9 +83,9 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtUName);
-            this.panel1.Location = new System.Drawing.Point(16, 19);
+            this.panel1.Location = new System.Drawing.Point(50, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(359, 159);
+            this.panel1.Size = new System.Drawing.Size(359, 133);
             this.panel1.TabIndex = 21;
             // 
             // label1
@@ -120,23 +126,38 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.lblPageFitle);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 248);
+            this.groupBox1.Size = new System.Drawing.Size(439, 274);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Change User Information";
+            // 
+            // lblPageFitle
+            // 
+            this.lblPageFitle.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.lblPageFitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPageFitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPageFitle.Font = new System.Drawing.Font("High Tower Text", 28F, System.Drawing.FontStyle.Bold);
+            this.lblPageFitle.ForeColor = System.Drawing.Color.White;
+            this.lblPageFitle.Location = new System.Drawing.Point(3, 16);
+            this.lblPageFitle.Name = "lblPageFitle";
+            this.lblPageFitle.Size = new System.Drawing.Size(433, 50);
+            this.lblPageFitle.TabIndex = 29;
+            this.lblPageFitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmChangeUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 416);
+            this.ClientSize = new System.Drawing.Size(439, 274);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChangeUserInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChangeUserInfo";
             this.Load += new System.EventHandler(this.frmChangeUserInfo_Load);
             this.panel1.ResumeLayout(false);
@@ -157,5 +178,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUName;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblPageFitle;
     }
 }

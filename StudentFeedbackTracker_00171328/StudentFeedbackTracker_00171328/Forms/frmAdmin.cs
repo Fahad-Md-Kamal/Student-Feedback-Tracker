@@ -15,6 +15,8 @@ namespace StudentFeedbackTracker_00171328.Forms
         public frmAdmin()
         {
             InitializeComponent();
+
+            lblUserType.Text = Tools.UserName;
         }
 
         private void btnStaffs_Click(object sender, EventArgs e)
@@ -45,6 +47,27 @@ namespace StudentFeedbackTracker_00171328.Forms
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Helper.PanelLoader(new frmChangeUsertype(), pnlService);
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmFeedback(), pnlService);
+        }
+
+        private void lblUserType_Click(object sender, EventArgs e)
+        {
+            frmChangeUserInfo frm = new frmChangeUserInfo();
+            frm.Show();
+        }
+
+        private void btnSubjectAss_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmSubjectAssessment(), pnlService);
+        }
+
+        private void btnNote_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmNote(), pnlService);
         }
     }
 }

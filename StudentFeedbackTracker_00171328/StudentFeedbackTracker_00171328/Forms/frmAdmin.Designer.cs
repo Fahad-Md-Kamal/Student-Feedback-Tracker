@@ -30,6 +30,7 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlbtn = new System.Windows.Forms.Panel();
+            this.btnSubjectAss = new System.Windows.Forms.Button();
             this.btnCourseDetail = new System.Windows.Forms.Button();
             this.btnBarChart = new System.Windows.Forms.Button();
             this.btnWordCloud = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnStaffUser = new System.Windows.Forms.Button();
             this.pnlService = new System.Windows.Forms.Panel();
+            this.lblUserType = new System.Windows.Forms.Label();
             this.pnlbtn.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(739, 67);
+            this.lblTitle.Size = new System.Drawing.Size(1128, 67);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Student Feedback Tracker";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,6 +61,7 @@
             // pnlbtn
             // 
             this.pnlbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(41)))), ((int)(((byte)(33)))));
+            this.pnlbtn.Controls.Add(this.btnSubjectAss);
             this.pnlbtn.Controls.Add(this.btnCourseDetail);
             this.pnlbtn.Controls.Add(this.btnBarChart);
             this.pnlbtn.Controls.Add(this.btnWordCloud);
@@ -74,13 +77,27 @@
             this.pnlbtn.Size = new System.Drawing.Size(206, 671);
             this.pnlbtn.TabIndex = 1;
             // 
+            // btnSubjectAss
+            // 
+            this.btnSubjectAss.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSubjectAss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubjectAss.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSubjectAss.ForeColor = System.Drawing.Color.White;
+            this.btnSubjectAss.Location = new System.Drawing.Point(12, 273);
+            this.btnSubjectAss.Name = "btnSubjectAss";
+            this.btnSubjectAss.Size = new System.Drawing.Size(180, 43);
+            this.btnSubjectAss.TabIndex = 0;
+            this.btnSubjectAss.Text = "Assessment Subject";
+            this.btnSubjectAss.UseVisualStyleBackColor = true;
+            this.btnSubjectAss.Click += new System.EventHandler(this.btnSubjectAss_Click);
+            // 
             // btnCourseDetail
             // 
             this.btnCourseDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCourseDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCourseDetail.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnCourseDetail.ForeColor = System.Drawing.Color.White;
-            this.btnCourseDetail.Location = new System.Drawing.Point(12, 267);
+            this.btnCourseDetail.Location = new System.Drawing.Point(12, 212);
             this.btnCourseDetail.Name = "btnCourseDetail";
             this.btnCourseDetail.Size = new System.Drawing.Size(180, 43);
             this.btnCourseDetail.TabIndex = 0;
@@ -94,7 +111,7 @@
             this.btnBarChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBarChart.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnBarChart.ForeColor = System.Drawing.Color.White;
-            this.btnBarChart.Location = new System.Drawing.Point(12, 582);
+            this.btnBarChart.Location = new System.Drawing.Point(12, 578);
             this.btnBarChart.Name = "btnBarChart";
             this.btnBarChart.Size = new System.Drawing.Size(180, 43);
             this.btnBarChart.TabIndex = 0;
@@ -108,7 +125,7 @@
             this.btnWordCloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWordCloud.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnWordCloud.ForeColor = System.Drawing.Color.White;
-            this.btnWordCloud.Location = new System.Drawing.Point(12, 519);
+            this.btnWordCloud.Location = new System.Drawing.Point(12, 517);
             this.btnWordCloud.Name = "btnWordCloud";
             this.btnWordCloud.Size = new System.Drawing.Size(180, 43);
             this.btnWordCloud.TabIndex = 0;
@@ -127,6 +144,7 @@
             this.btnNote.TabIndex = 0;
             this.btnNote.Text = "NOTE";
             this.btnNote.UseVisualStyleBackColor = true;
+            this.btnNote.Click += new System.EventHandler(this.btnNote_Click);
             // 
             // btnFeedback
             // 
@@ -134,24 +152,25 @@
             this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeedback.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnFeedback.ForeColor = System.Drawing.Color.White;
-            this.btnFeedback.Location = new System.Drawing.Point(12, 393);
+            this.btnFeedback.Location = new System.Drawing.Point(12, 395);
             this.btnFeedback.Name = "btnFeedback";
             this.btnFeedback.Size = new System.Drawing.Size(180, 43);
             this.btnFeedback.TabIndex = 0;
             this.btnFeedback.Text = "FEEDBACK";
             this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
             // btnAssessment
             // 
             this.btnAssessment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAssessment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAssessment.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAssessment.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold);
             this.btnAssessment.ForeColor = System.Drawing.Color.White;
-            this.btnAssessment.Location = new System.Drawing.Point(12, 330);
+            this.btnAssessment.Location = new System.Drawing.Point(12, 334);
             this.btnAssessment.Name = "btnAssessment";
             this.btnAssessment.Size = new System.Drawing.Size(180, 43);
             this.btnAssessment.TabIndex = 0;
-            this.btnAssessment.Text = "ASSESSMENT";
+            this.btnAssessment.Text = "ASSESSMENT DETAIL";
             this.btnAssessment.UseVisualStyleBackColor = true;
             this.btnAssessment.Click += new System.EventHandler(this.btnAssessment_Click);
             // 
@@ -161,7 +180,7 @@
             this.btnStdntUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStdntUser.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnStdntUser.ForeColor = System.Drawing.Color.White;
-            this.btnStdntUser.Location = new System.Drawing.Point(12, 204);
+            this.btnStdntUser.Location = new System.Drawing.Point(12, 151);
             this.btnStdntUser.Name = "btnStdntUser";
             this.btnStdntUser.Size = new System.Drawing.Size(180, 43);
             this.btnStdntUser.TabIndex = 0;
@@ -175,7 +194,7 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(12, 78);
+            this.btnUsers.Location = new System.Drawing.Point(12, 29);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(180, 43);
             this.btnUsers.TabIndex = 0;
@@ -189,7 +208,7 @@
             this.btnStaffUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaffUser.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.btnStaffUser.ForeColor = System.Drawing.Color.White;
-            this.btnStaffUser.Location = new System.Drawing.Point(12, 141);
+            this.btnStaffUser.Location = new System.Drawing.Point(12, 90);
             this.btnStaffUser.Name = "btnStaffUser";
             this.btnStaffUser.Size = new System.Drawing.Size(180, 43);
             this.btnStaffUser.TabIndex = 0;
@@ -202,14 +221,27 @@
             this.pnlService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlService.Location = new System.Drawing.Point(206, 67);
             this.pnlService.Name = "pnlService";
-            this.pnlService.Size = new System.Drawing.Size(533, 671);
+            this.pnlService.Size = new System.Drawing.Size(922, 671);
             this.pnlService.TabIndex = 2;
+            // 
+            // lblUserType
+            // 
+            this.lblUserType.BackColor = System.Drawing.Color.SeaGreen;
+            this.lblUserType.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.ForeColor = System.Drawing.Color.White;
+            this.lblUserType.Location = new System.Drawing.Point(2, 0);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(181, 67);
+            this.lblUserType.TabIndex = 3;
+            this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserType.Click += new System.EventHandler(this.lblUserType_Click);
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 738);
+            this.ClientSize = new System.Drawing.Size(1128, 738);
+            this.Controls.Add(this.lblUserType);
             this.Controls.Add(this.pnlService);
             this.Controls.Add(this.pnlbtn);
             this.Controls.Add(this.lblTitle);
@@ -235,5 +267,7 @@
         private System.Windows.Forms.Button btnStdntUser;
         private System.Windows.Forms.Button btnBarChart;
         private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Label lblUserType;
+        private System.Windows.Forms.Button btnSubjectAss;
     }
 }

@@ -88,12 +88,6 @@
     <Compile Include="FeedbackType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,10 +112,10 @@
     <Compile Include="Forms\frmBarChart.Designer.cs">
       <DependentUpon>frmBarChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmChangeUserInfo.cs">
+    <Compile Include="Forms\frmChangeUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangeUserInfo.Designer.cs">
+    <Compile Include="Forms\frmChangeUserInfo.Designer.cs">
       <DependentUpon>frmChangeUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmChangeUsertype.cs">
@@ -136,22 +130,16 @@
     <Compile Include="Forms\frmCourse.Designer.cs">
       <DependentUpon>frmCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCourseList.cs">
+    <Compile Include="Forms\frmFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCourseList.Designer.cs">
-      <DependentUpon>frmCourseList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmFeedback.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmFeedback.Designer.cs">
+    <Compile Include="Forms\frmFeedback.Designer.cs">
       <DependentUpon>frmFeedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFeedbackType.cs">
+    <Compile Include="Forms\frmFeedbackType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFeedbackType.Designer.cs">
+    <Compile Include="Forms\frmFeedbackType.Designer.cs">
       <DependentUpon>frmFeedbackType.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmGrade.cs">
@@ -160,58 +148,16 @@
     <Compile Include="Forms\frmGrade.Designer.cs">
       <DependentUpon>frmGrade.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListAssessment.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListAssessment.Designer.cs">
-      <DependentUpon>frmListAssessment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListAssessmentType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListAssessmentType.Designer.cs">
-      <DependentUpon>frmListAssessmentType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListFeedback.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListFeedback.Designer.cs">
-      <DependentUpon>frmListFeedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListNote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListNote.Designer.cs">
-      <DependentUpon>frmListNote.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListStudent.Designer.cs">
-      <DependentUpon>frmListStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListSubjectAss.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListSubjectAss.Designer.cs">
-      <DependentUpon>frmListSubjectAss.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmListUserType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListUserType.Designer.cs">
-      <DependentUpon>frmListUserType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNote.cs">
+    <Compile Include="Forms\frmNote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNote.Designer.cs">
+    <Compile Include="Forms\frmNote.Designer.cs">
       <DependentUpon>frmNote.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmStaffRegister.cs">
@@ -226,23 +172,17 @@
     <Compile Include="Forms\frmStudentRegister.Designer.cs">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSubject.cs">
+    <Compile Include="Forms\frmSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSubject.Designer.cs">
+    <Compile Include="Forms\frmSubject.Designer.cs">
       <DependentUpon>frmSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSubjectAssessment.cs">
+    <Compile Include="Forms\frmSubjectAssessment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSubjectAssessment.Designer.cs">
+    <Compile Include="Forms\frmSubjectAssessment.Designer.cs">
       <DependentUpon>frmSubjectAssessment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSubjectList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSubjectList.Designer.cs">
-      <DependentUpon>frmSubjectList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmWordCloud.cs">
       <SubType>Form</SubType>
@@ -299,9 +239,6 @@
     <Compile Include="WordCloud.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,7 +251,7 @@
     <EmbeddedResource Include="Forms\frmBarChart.resx">
       <DependentUpon>frmBarChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChangeUserInfo.resx">
+    <EmbeddedResource Include="Forms\frmChangeUserInfo.resx">
       <DependentUpon>frmChangeUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChangeUsertype.resx">
@@ -323,43 +260,19 @@
     <EmbeddedResource Include="Forms\frmCourse.resx">
       <DependentUpon>frmCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCourseList.resx">
-      <DependentUpon>frmCourseList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmFeedback.resx">
+    <EmbeddedResource Include="Forms\frmFeedback.resx">
       <DependentUpon>frmFeedback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFeedbackType.resx">
+    <EmbeddedResource Include="Forms\frmFeedbackType.resx">
       <DependentUpon>frmFeedbackType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmGrade.resx">
       <DependentUpon>frmGrade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListAssessment.resx">
-      <DependentUpon>frmListAssessment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListAssessmentType.resx">
-      <DependentUpon>frmListAssessmentType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListFeedback.resx">
-      <DependentUpon>frmListFeedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListNote.resx">
-      <DependentUpon>frmListNote.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListStudent.resx">
-      <DependentUpon>frmListStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListSubjectAss.resx">
-      <DependentUpon>frmListSubjectAss.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListUserType.resx">
-      <DependentUpon>frmListUserType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNote.resx">
+    <EmbeddedResource Include="Forms\frmNote.resx">
       <DependentUpon>frmNote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmStaffRegister.resx">
@@ -368,14 +281,11 @@
     <EmbeddedResource Include="Forms\frmStudentRegister.resx">
       <DependentUpon>frmStudentRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSubject.resx">
+    <EmbeddedResource Include="Forms\frmSubject.resx">
       <DependentUpon>frmSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSubjectAssessment.resx">
+    <EmbeddedResource Include="Forms\frmSubjectAssessment.resx">
       <DependentUpon>frmSubjectAssessment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSubjectList.resx">
-      <DependentUpon>frmSubjectList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWordCloud.resx">
       <DependentUpon>frmWordCloud.cs</DependentUpon>
@@ -414,11 +324,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Database1.mdf" />
     <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Model1.Context.tt">

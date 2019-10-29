@@ -44,27 +44,31 @@
             this.groupBox2.Controls.Add(this.txtPass);
             this.groupBox2.Controls.Add(this.txtName);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 24);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(285, 144);
+            this.groupBox2.Size = new System.Drawing.Size(291, 306);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Login Information";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 68);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Location = new System.Drawing.Point(26, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(230, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Password : ";
+            this.label3.Text = "Password";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLog
             // 
-            this.btnLog.Location = new System.Drawing.Point(24, 105);
+            this.btnLog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Location = new System.Drawing.Point(30, 223);
             this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 23);
+            this.btnLog.Size = new System.Drawing.Size(226, 45);
             this.btnLog.TabIndex = 2;
             this.btnLog.Text = "Login";
             this.btnLog.UseVisualStyleBackColor = true;
@@ -72,33 +76,40 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(108, 61);
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPass.Location = new System.Drawing.Point(26, 174);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(154, 20);
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(230, 29);
             this.txtPass.TabIndex = 1;
+            this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(108, 33);
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.Location = new System.Drawing.Point(26, 104);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(154, 20);
+            this.txtName.Size = new System.Drawing.Size(230, 29);
             this.txtName.TabIndex = 0;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 33);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(30, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(226, 37);
             this.label2.TabIndex = 0;
-            this.label2.Text = "User Name : ";
+            this.label2.Text = "User Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmLogin
             // 
             this.AcceptButton = this.btnLog;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 229);
+            this.ClientSize = new System.Drawing.Size(291, 306);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
