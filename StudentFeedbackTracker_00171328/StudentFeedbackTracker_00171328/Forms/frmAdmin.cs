@@ -17,40 +17,34 @@ namespace StudentFeedbackTracker_00171328.Forms
             InitializeComponent();
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
+        private void btnStaffs_Click(object sender, EventArgs e)
         {
-            PanelFormLoader.ServingForm(new frmStaffRegister(), pnlService);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
+            Helper.PanelLoader(new frmStaffRegister(), pnlService);
         }
 
         private void btnStdntUser_Click(object sender, EventArgs e)
         {
-            PanelFormLoader.ServingForm(new frmStudentRegister(), pnlService);
+            Helper.PanelLoader(new frmStudentRegister(), pnlService);
         }
 
         private void btnAssessment_Click(object sender, EventArgs e)
         {
-            PanelFormLoader.ServingForm(new frmAssessment(), pnlService);
+            Helper.PanelLoader(new frmAssessment(), pnlService);
+        }
+
+        private void btnCourseDetail_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmCourse(), pnlService);
+        }
+
+        private void btnBarChart_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmBarChart(), pnlService);
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmChangeUsertype(), pnlService);
         }
     }
 }

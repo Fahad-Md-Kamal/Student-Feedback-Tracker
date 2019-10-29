@@ -16,6 +16,7 @@ namespace StudentFeedbackTracker_00171328
         public frmChangeUsertype()
         {
             InitializeComponent();
+            LoadUserList();
         }
 
         private void frmChangeUsertype_Load(object sender, EventArgs e)
@@ -33,16 +34,17 @@ namespace StudentFeedbackTracker_00171328
             var data = db.Users.Where(d => d.Id == idn).FirstOrDefault();
             if (data != null)
             {
-                //data.uName = txtUName.Text;
-                //data.uPass = txtPass.Text;
-                data.typeId = Int32.Parse( cboType.SelectedValue.ToString());
+                data.uName = txtUName.Text;
+                data.uPass = txtPass.Text;
+                data.typeId = Int32.Parse(cboType.SelectedValue.ToString());
 
                 db.SaveChanges();
-                MessageBox.Show("Success");
+                LoadUserList();
+                MessageBox.Show("User type Updated", "SUCCESS !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Not Found !!!");
+                MessageBox.Show("Not Found !!!", "ERROR !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -63,6 +65,28 @@ namespace StudentFeedbackTracker_00171328
             catch (Exception)
             {
 
+            }
+        }
+
+
+
+        private void LoadUserList()
+        {
+            var us = db.Users.Select(d =>
+                new { UserId = d.Id, d.uName, d.uPass, d.UserType.tName }).ToList();
+            gv.DataSource = us;
+        }
+
+        private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = gv.Rows[e.RowIndex];
+
+                txtId.Text = row.Cells[0].Value.ToString();
+                txtUName.Text = row.Cells[1].Value.ToString();
+                txtPass.Text = row.Cells[2].Value.ToString();
+                cboType.Text = row.Cells[3].Value.ToString();
             }
         }
     }

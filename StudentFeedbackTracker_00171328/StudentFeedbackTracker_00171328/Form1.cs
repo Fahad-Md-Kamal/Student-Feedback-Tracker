@@ -108,9 +108,6 @@ namespace StudentFeedbackTracker_00171328
 
         private void allUserInformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserList frm = new frmUserList();
-            frm.MdiParent = this;
-            frm.Show();
         }
 
 

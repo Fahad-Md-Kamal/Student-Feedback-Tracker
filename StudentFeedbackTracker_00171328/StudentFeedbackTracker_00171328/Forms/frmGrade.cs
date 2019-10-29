@@ -23,14 +23,15 @@ namespace StudentFeedbackTracker_00171328
             Grade grd = new Grade()
             {
                 gradeSign = txtGrade.Text,
-                maxMark = Int32.Parse( txtMaxMarks.Text),
-                minMark = Int32.Parse( txtMinMarks.Text)
+                maxMark = int.Parse( txtMaxMarks.Text),
+                minMark = int.Parse( txtMinMarks.Text)
             };
             db.Grades.Add(grd);
             db.SaveChanges();
 
-            MessageBox.Show("Data Inserted Successfully ...");
+            MessageBox.Show("Data Inserted Successfully ...", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            Dispose();
         }
     }
 }

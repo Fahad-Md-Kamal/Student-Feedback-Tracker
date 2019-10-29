@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxfrm = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,37 +50,37 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gv = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.gbxfrm.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbxfrm
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.btnUpdate);
-            this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Controls.Add(this.txtSalary);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.dtDOB);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtAddress);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.lblId);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 490);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Staff Information";
+            this.gbxfrm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gbxfrm.Controls.Add(this.panel1);
+            this.gbxfrm.Controls.Add(this.btnDelete);
+            this.gbxfrm.Controls.Add(this.btnUpdate);
+            this.gbxfrm.Controls.Add(this.btnSubmit);
+            this.gbxfrm.Controls.Add(this.txtSalary);
+            this.gbxfrm.Controls.Add(this.label1);
+            this.gbxfrm.Controls.Add(this.label7);
+            this.gbxfrm.Controls.Add(this.txtEmail);
+            this.gbxfrm.Controls.Add(this.dtDOB);
+            this.gbxfrm.Controls.Add(this.label4);
+            this.gbxfrm.Controls.Add(this.txtAddress);
+            this.gbxfrm.Controls.Add(this.label3);
+            this.gbxfrm.Controls.Add(this.txtId);
+            this.gbxfrm.Controls.Add(this.lblId);
+            this.gbxfrm.Controls.Add(this.txtName);
+            this.gbxfrm.Controls.Add(this.label2);
+            this.gbxfrm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gbxfrm.Location = new System.Drawing.Point(0, 0);
+            this.gbxfrm.Name = "gbxfrm";
+            this.gbxfrm.Size = new System.Drawing.Size(405, 490);
+            this.gbxfrm.TabIndex = 7;
+            this.gbxfrm.TabStop = false;
+            this.gbxfrm.Text = "Staff Information";
             // 
             // panel1
             // 
@@ -136,7 +136,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnSubmit_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -156,7 +156,7 @@
             this.btnSubmit.TabIndex = 12;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click_1);
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtSalary
             // 
@@ -280,13 +280,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 490);
             this.Controls.Add(this.gv);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.gbxfrm);
             this.Name = "frmStaffRegister";
             this.Text = "frmStaffRegister";
             this.Load += new System.EventHandler(this.frmStaffRegister_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxfrm.ResumeLayout(false);
+            this.gbxfrm.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
@@ -296,7 +295,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxfrm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label6;

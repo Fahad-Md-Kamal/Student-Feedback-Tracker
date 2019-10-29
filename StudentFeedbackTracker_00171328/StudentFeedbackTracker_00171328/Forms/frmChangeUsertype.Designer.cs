@@ -32,20 +32,22 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboType = new System.Windows.Forms.ComboBox();
+            this.gv = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(16, 196);
+            this.btnSubmit.Location = new System.Drawing.Point(288, 344);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(100, 23);
             this.btnSubmit.TabIndex = 12;
@@ -81,10 +83,46 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtUName);
-            this.panel1.Location = new System.Drawing.Point(16, 19);
+            this.panel1.Location = new System.Drawing.Point(29, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(359, 159);
             this.panel1.TabIndex = 21;
+            // 
+            // cboType
+            // 
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Location = new System.Drawing.Point(118, 112);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(121, 21);
+            this.cboType.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(11, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "User Id : ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(12, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "User Type : ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(118, 27);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(224, 20);
+            this.txtId.TabIndex = 22;
+            this.txtId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyUp);
             // 
             // label8
             // 
@@ -108,54 +146,31 @@
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.btnSubmit);
-            this.groupBox1.Location = new System.Drawing.Point(12, 24);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 248);
+            this.groupBox1.Size = new System.Drawing.Size(417, 571);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change User Information";
             // 
-            // label1
+            // gv
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(11, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "User Id : ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(118, 27);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(224, 20);
-            this.txtId.TabIndex = 22;
-            this.txtId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyUp);
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(12, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "User Type : ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cboType
-            // 
-            this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(118, 112);
-            this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(121, 21);
-            this.cboType.TabIndex = 25;
+            this.gv.BackgroundColor = System.Drawing.Color.White;
+            this.gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv.Location = new System.Drawing.Point(417, 0);
+            this.gv.Name = "gv";
+            this.gv.Size = new System.Drawing.Size(597, 571);
+            this.gv.TabIndex = 5;
+            this.gv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CellClick);
             // 
             // frmChangeUsertype
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 296);
+            this.ClientSize = new System.Drawing.Size(1014, 571);
+            this.Controls.Add(this.gv);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChangeUsertype";
             this.Text = "frmChangeUsertype";
@@ -163,6 +178,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +196,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUName;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView gv;
     }
 }

@@ -5,8 +5,8 @@
 );
 
 INSERT INTO UserType VALUES ('ADMIN')
-INSERT INTO UserType VALUES ('STUDENT')
 INSERT INTO UserType VALUES ('STAFF')
+INSERT INTO UserType VALUES ('STUDENT')
 
 CREATE TABLE [dbo].[User] (
     [Id]     INT          IDENTITY (1, 1) NOT NULL,
@@ -16,6 +16,16 @@ CREATE TABLE [dbo].[User] (
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_User_ToUserType] FOREIGN KEY ([typeId]) REFERENCES [dbo].[UserType] ([Id])
 );
+
+
+INSERT INTO [User] VALUES('admin', '123', 1);
+INSERT INTO [User] VALUES('Stuart', '123', 2);
+INSERT INTO [User] VALUES('Cameroon', '123', 2);
+INSERT INTO [User] VALUES('Fahad', '123', 3);
+INSERT INTO [User] VALUES('Lorin', '123', 3);
+
+
+
 
 CREATE TABLE [dbo].[Course] (
     [Id]    INT          IDENTITY (1, 1) NOT NULL,
@@ -37,6 +47,7 @@ CREATE TABLE [dbo].[Subject] (
 INSERT INTO Subject VALUES('DDOOCP',1)
 INSERT INTO Subject VALUES('Database',1)
 INSERT INTO Subject VALUES('Web Design',1)
+INSERT INTO Subject VALUES('ADI',2)
 
 CREATE TABLE [dbo].[Student] (
     [Id]      INT          IDENTITY (1, 1) NOT NULL,
@@ -56,21 +67,9 @@ CREATE TABLE [dbo].[Student] (
 
 
 
-INSERT INTO [User] VALUES(
-  'admin',
-  '123',
-  1
-);
 
-INSERT INTO Student VALUES(
-    'Student of NCC' ,
-    'UK',
-    '1964/03/09',
-    'NCC@gmail.com', 
-    'S-001', 
-    1, 
-    1
-);
+INSERT INTO Student VALUES( 'Fahad Md Kamal' , 'Lalkha, Fatullah, Narayanganj', '1996/01/08', '1000835@gmail.com', 'S-001', 2, 4);
+INSERT INTO Student VALUES( 'Lorin Rippin' , 'Farmgate, Dhaka', '1998/05/15', '1000801@gmail.com', 'S-002', 2, 5);
 
 CREATE TABLE [dbo].[Staff] (
     [Id]      INT          IDENTITY (1, 1) NOT NULL,
@@ -85,6 +84,8 @@ CREATE TABLE [dbo].[Staff] (
     CONSTRAINT [FK_Staff_ToUser] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id])
 );
 
+INSERT INTO Staff VALUES( 'Devid Stuart', 'Greenwich','1964/10/10', 'stuart@gmail.com', 80000, 2);
+INSERT INTO Staff VALUES( 'Devid Cameroon', 'London','1974/05/16', 'cameroon@gmail.com', 65000, 3);
 
 
 --Change Here
@@ -95,6 +96,9 @@ CREATE TABLE [dbo].[AssessmentType] (
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
+INSERT INTO AssessmentType VALUES( 'Exam', 100);
+INSERT INTO AssessmentType VALUES( 'Assignment', 100);
+INSERT INTO AssessmentType VALUES( 'Quise', 10);
 
 
 CREATE TABLE [dbo].[SubjectAssessment] (
@@ -106,6 +110,8 @@ CREATE TABLE [dbo].[SubjectAssessment] (
     CONSTRAINT [FK_SubjectAssessment_ToSubject] FOREIGN KEY ([sId]) REFERENCES [dbo].[Subject] ([Id])
 );
 
+INSERT INTO SubjectAssessment VALUES( 1, 4 );
+INSERT INTO SubjectAssessment VALUES( 2, 4 );
 
 
 CREATE TABLE [dbo].[StudentCourse] (
@@ -117,6 +123,8 @@ CREATE TABLE [dbo].[StudentCourse] (
     CONSTRAINT [FK_StudentCourse_ToUser] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id])
 );
 
+INSERT INTO StudentCourse VALUES( 2, 4);
+INSERT INTO StudentCourse VALUES( 1, 5);
 
 
 CREATE TABLE [dbo].[Grade] (
@@ -127,6 +135,10 @@ CREATE TABLE [dbo].[Grade] (
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
+INSERT INTO Grade VALUES( 'A', 100, 80);
+INSERT INTO Grade VALUES( 'B', 79, 70);
+INSERT INTO Grade VALUES( 'C', 69, 60);
+INSERT INTO Grade VALUES( 'D', 59, 40);
 
 
 CREATE TABLE [dbo].[Assessment] (
@@ -145,23 +157,28 @@ CREATE TABLE [dbo].[Assessment] (
     CONSTRAINT [FK_Assessment_ToGrade] FOREIGN KEY ([gId]) REFERENCES [dbo].[Grade] ([Id])
 );
 
+INSERT INTO Assessment VALUES( 2, 83, 1, 1, 2, '2019/10/08', 'Cyber Security and Cryptography');
+INSERT INTO Assessment VALUES( 2, 70, 2, 2, 2, '2018/11/10', 'Pretty Perfect Shop');
 
 
 
 
 CREATE TABLE [dbo].[FeedbackType] (
     [Id]          INT          IDENTITY (1, 1) NOT NULL,
-    [fType]       VARCHAR (10) NULL,
-    [Description] VARCHAR (50) NULL,
+    [fType]       VARCHAR (30) NULL,
+    [Description] VARCHAR (100) NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
+INSERT INTO FeedbackType VALUES( 'SUGGESTION', 'Suggestion for Improve');
+INSERT INTO FeedbackType VALUES( 'COMMENT', 'Comment over a work');
+INSERT INTO FeedbackType VALUES( 'SUMMETIVE FEEDBACK', 'Feedback for Overall Performance');
 
 
 CREATE TABLE [dbo].[Feedback] (
     [Id]          INT          IDENTITY (1, 1) NOT NULL,
     [Keywords]    VARCHAR (50) NULL,
-    [Description] VARCHAR (50) NULL,
+    [Description] VARCHAR (300) NULL,
     [fbTypeId]    INT          NULL,
     [assId]       INT          NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
@@ -169,27 +186,29 @@ CREATE TABLE [dbo].[Feedback] (
     CONSTRAINT [FK_Feedback_ToAssess] FOREIGN KEY ([assId]) REFERENCES [dbo].[Assessment] ([Id])
 );
 
+INSERT INTO Feedback VALUES( 'Improve Points', 'Improve several Points. Modify the Main Ideas. Clear the ambiguity of main objectves', 1, 2);
+INSERT INTO Feedback VALUES( 'Average Done', 'The work was on an average level. This could be done even better. But you have done a better work', 2, 1);
 
 
 CREATE TABLE [dbo].[Note] (
     [Id]    INT          IDENTITY (1, 1) NOT NULL,
     [fbId]  INT          NULL,
-    [Notes] VARCHAR (50) NULL,
+    [Notes] VARCHAR (300) NULL,
     [uId]   INT          NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Note_ToFeedback] FOREIGN KEY ([fbId]) REFERENCES [dbo].[Feedback] ([Id]),
     CONSTRAINT [FK_Note_ToUser] FOREIGN KEY ([uId]) REFERENCES [dbo].[User] ([Id])
 );
 
+INSERT INTO Note VALUES( '1', 'The point needs to be described considering a real scenerio.', 4);
+INSERT INTO Note VALUES( '2', 'Next semister will be started from the importance of regular practice for code', 5);
 
 
 CREATE TABLE [dbo].[WordCloud] (
     [Id]          INT           IDENTITY (1, 1) NOT NULL,
-    [Words]       VARCHAR (100) NULL,
-    [Description] VARCHAR (50)  NULL,
-    [fbId]        INT           NULL,
+    [Word]       VARCHAR (100) NULL,
+    [count] int  NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [tblWCount] FOREIGN KEY ([fbId]) REFERENCES [dbo].[Feedback] ([Id])
 );
 
 

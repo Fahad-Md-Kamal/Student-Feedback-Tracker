@@ -43,6 +43,7 @@ namespace StudentFeedbackTracker_00171328
             db.SaveChanges();
 
             MessageBox.Show("Data Inserted Successfully ...");
+            this.Dispose();
 
         }
     }

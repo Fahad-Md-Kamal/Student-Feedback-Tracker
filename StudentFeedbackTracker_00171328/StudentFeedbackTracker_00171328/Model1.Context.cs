@@ -16,7 +16,7 @@ namespace StudentFeedbackTracker_00171328
     public partial class Database1Entities : DbContext
     {
         public Database1Entities()
-            : base("name=DatabaseEntities")
+            : base("name=Database1Entities")
         {
         }
     

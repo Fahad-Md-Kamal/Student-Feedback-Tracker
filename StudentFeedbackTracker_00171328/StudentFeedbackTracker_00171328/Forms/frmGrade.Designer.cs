@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtMinMarks = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMaxMarks = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.txtGrade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaxMarks = new System.Windows.Forms.TextBox();
-            this.txtMinMarks = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,29 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grade Information";
+            // 
+            // txtMinMarks
+            // 
+            this.txtMinMarks.Location = new System.Drawing.Point(116, 87);
+            this.txtMinMarks.Name = "txtMinMarks";
+            this.txtMinMarks.Size = new System.Drawing.Size(128, 20);
+            this.txtMinMarks.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Minimum Mark : ";
+            // 
+            // txtMaxMarks
+            // 
+            this.txtMaxMarks.Location = new System.Drawing.Point(116, 61);
+            this.txtMaxMarks.Name = "txtMaxMarks";
+            this.txtMaxMarks.Size = new System.Drawing.Size(128, 20);
+            this.txtMaxMarks.TabIndex = 4;
             // 
             // label3
             // 
@@ -90,34 +113,11 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Grade : ";
             // 
-            // txtMaxMarks
-            // 
-            this.txtMaxMarks.Location = new System.Drawing.Point(116, 61);
-            this.txtMaxMarks.Name = "txtMaxMarks";
-            this.txtMaxMarks.Size = new System.Drawing.Size(128, 20);
-            this.txtMaxMarks.TabIndex = 4;
-            // 
-            // txtMinMarks
-            // 
-            this.txtMinMarks.Location = new System.Drawing.Point(116, 87);
-            this.txtMinMarks.Name = "txtMinMarks";
-            this.txtMinMarks.Size = new System.Drawing.Size(128, 20);
-            this.txtMinMarks.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Minimum Mark : ";
-            // 
             // frmGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 275);
+            this.ClientSize = new System.Drawing.Size(308, 221);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmGrade";
             this.Text = "frmGrade";

@@ -15,10 +15,7 @@ namespace StudentFeedbackTracker_00171328
     public partial class WordCloud
     {
         public int Id { get; set; }
-        public string Words { get; set; }
-        public string Description { get; set; }
-        public Nullable<int> fbId { get; set; }
-    
-        public virtual Feedback Feedback { get; set; }
+        public string Word { get; set; }
+        public Nullable<int> count { get; set; }
     }
 }

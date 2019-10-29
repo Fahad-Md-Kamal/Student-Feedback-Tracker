@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAssType = new System.Windows.Forms.Button();
+            this.btnGrade = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.dtADate = new System.Windows.Forms.DateTimePicker();
@@ -39,19 +45,14 @@
             this.cboGrade = new System.Windows.Forms.ComboBox();
             this.lblStaff = new System.Windows.Forms.Label();
             this.cboUser = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblCourse = new System.Windows.Forms.Label();
             this.cboCourse = new System.Windows.Forms.ComboBox();
             this.txtMark = new System.Windows.Forms.TextBox();
             this.lblMark = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.gv = new System.Windows.Forms.DataGridView();
-            this.btnCourse = new System.Windows.Forms.Button();
-            this.btnGrade = new System.Windows.Forms.Button();
-            this.btnAssType = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,8 @@
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.btnAssType);
             this.groupBox1.Controls.Add(this.btnGrade);
-            this.groupBox1.Controls.Add(this.btnCourse);
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.lblSearch);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Controls.Add(this.txtTitle);
@@ -84,15 +86,90 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 429);
+            this.groupBox1.Size = new System.Drawing.Size(477, 572);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Assessment Information";
             // 
+            // btnAssType
+            // 
+            this.btnAssType.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAssType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAssType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAssType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssType.ForeColor = System.Drawing.Color.White;
+            this.btnAssType.Location = new System.Drawing.Point(369, 364);
+            this.btnAssType.Name = "btnAssType";
+            this.btnAssType.Size = new System.Drawing.Size(63, 23);
+            this.btnAssType.TabIndex = 33;
+            this.btnAssType.Text = "+ Add";
+            this.btnAssType.UseVisualStyleBackColor = false;
+            this.btnAssType.Click += new System.EventHandler(this.btnAssType_Click);
+            // 
+            // btnGrade
+            // 
+            this.btnGrade.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrade.ForeColor = System.Drawing.Color.White;
+            this.btnGrade.Location = new System.Drawing.Point(369, 320);
+            this.btnGrade.Name = "btnGrade";
+            this.btnGrade.Size = new System.Drawing.Size(63, 23);
+            this.btnGrade.TabIndex = 33;
+            this.btnGrade.Text = "+ Add";
+            this.btnGrade.UseVisualStyleBackColor = false;
+            this.btnGrade.Click += new System.EventHandler(this.btnGrade_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtSearch.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(271, 40);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(200, 29);
+            this.txtSearch.TabIndex = 32;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSearch.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSearch.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
+            this.lblSearch.Location = new System.Drawing.Point(271, 10);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(200, 29);
+            this.lblSearch.TabIndex = 31;
+            this.lblSearch.Text = "Search By Grade";
+            this.lblSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSearch.Click += new System.EventHandler(this.lblSearch_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtID.Location = new System.Drawing.Point(232, 148);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.TabIndex = 32;
+            // 
+            // lblId
+            // 
+            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblId.Location = new System.Drawing.Point(100, 148);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(100, 23);
+            this.lblId.TabIndex = 31;
+            this.lblId.Text = "ID : ";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtTitle
             // 
             this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtTitle.Location = new System.Drawing.Point(232, 69);
+            this.txtTitle.Location = new System.Drawing.Point(232, 189);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(121, 20);
             this.txtTitle.TabIndex = 32;
@@ -101,7 +178,7 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTitle.Location = new System.Drawing.Point(100, 69);
+            this.lblTitle.Location = new System.Drawing.Point(100, 189);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(100, 23);
             this.lblTitle.TabIndex = 31;
@@ -111,7 +188,7 @@
             // dtADate
             // 
             this.dtADate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.dtADate.Location = new System.Drawing.Point(232, 290);
+            this.dtADate.Location = new System.Drawing.Point(232, 410);
             this.dtADate.Name = "dtADate";
             this.dtADate.Size = new System.Drawing.Size(121, 20);
             this.dtADate.TabIndex = 30;
@@ -120,7 +197,7 @@
             // 
             this.lblAssessmentDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAssessmentDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAssessmentDate.Location = new System.Drawing.Point(100, 288);
+            this.lblAssessmentDate.Location = new System.Drawing.Point(100, 408);
             this.lblAssessmentDate.Name = "lblAssessmentDate";
             this.lblAssessmentDate.Size = new System.Drawing.Size(100, 23);
             this.lblAssessmentDate.TabIndex = 29;
@@ -131,7 +208,7 @@
             // 
             this.lblAssType.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblAssType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAssType.Location = new System.Drawing.Point(100, 244);
+            this.lblAssType.Location = new System.Drawing.Point(100, 364);
             this.lblAssType.Name = "lblAssType";
             this.lblAssType.Size = new System.Drawing.Size(100, 23);
             this.lblAssType.TabIndex = 27;
@@ -142,7 +219,7 @@
             // 
             this.cboAss.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboAss.FormattingEnabled = true;
-            this.cboAss.Location = new System.Drawing.Point(232, 246);
+            this.cboAss.Location = new System.Drawing.Point(232, 366);
             this.cboAss.Name = "cboAss";
             this.cboAss.Size = new System.Drawing.Size(121, 21);
             this.cboAss.TabIndex = 26;
@@ -151,7 +228,7 @@
             // 
             this.lblGrade.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblGrade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblGrade.Location = new System.Drawing.Point(100, 200);
+            this.lblGrade.Location = new System.Drawing.Point(100, 320);
             this.lblGrade.Name = "lblGrade";
             this.lblGrade.Size = new System.Drawing.Size(100, 23);
             this.lblGrade.TabIndex = 25;
@@ -162,7 +239,7 @@
             // 
             this.cboGrade.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboGrade.FormattingEnabled = true;
-            this.cboGrade.Location = new System.Drawing.Point(232, 202);
+            this.cboGrade.Location = new System.Drawing.Point(232, 322);
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(121, 21);
             this.cboGrade.TabIndex = 24;
@@ -171,26 +248,48 @@
             // 
             this.lblStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblStaff.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblStaff.Location = new System.Drawing.Point(100, 113);
+            this.lblStaff.Location = new System.Drawing.Point(100, 233);
             this.lblStaff.Name = "lblStaff";
             this.lblStaff.Size = new System.Drawing.Size(100, 23);
             this.lblStaff.TabIndex = 23;
-            this.lblStaff.Text = "Staff : ";
+            this.lblStaff.Text = "Student: ";
             this.lblStaff.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboUser
             // 
             this.cboUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboUser.FormattingEnabled = true;
-            this.cboUser.Location = new System.Drawing.Point(232, 115);
+            this.cboUser.Location = new System.Drawing.Point(232, 235);
             this.cboUser.Name = "cboUser";
             this.cboUser.Size = new System.Drawing.Size(121, 21);
             this.cboUser.TabIndex = 22;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDelete.Location = new System.Drawing.Point(100, 503);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(63, 23);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdate.Location = new System.Drawing.Point(191, 503);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(63, 23);
+            this.btnUpdate.TabIndex = 12;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSubmit.Location = new System.Drawing.Point(290, 383);
+            this.btnSubmit.Location = new System.Drawing.Point(290, 503);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(63, 23);
             this.btnSubmit.TabIndex = 12;
@@ -202,7 +301,7 @@
             // 
             this.lblCourse.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCourse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCourse.Location = new System.Drawing.Point(100, 157);
+            this.lblCourse.Location = new System.Drawing.Point(100, 277);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(100, 23);
             this.lblCourse.TabIndex = 20;
@@ -213,7 +312,7 @@
             // 
             this.cboCourse.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cboCourse.FormattingEnabled = true;
-            this.cboCourse.Location = new System.Drawing.Point(232, 159);
+            this.cboCourse.Location = new System.Drawing.Point(232, 279);
             this.cboCourse.Name = "cboCourse";
             this.cboCourse.Size = new System.Drawing.Size(121, 21);
             this.cboCourse.TabIndex = 19;
@@ -221,7 +320,7 @@
             // txtMark
             // 
             this.txtMark.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtMark.Location = new System.Drawing.Point(232, 333);
+            this.txtMark.Location = new System.Drawing.Point(232, 453);
             this.txtMark.Name = "txtMark";
             this.txtMark.Size = new System.Drawing.Size(121, 20);
             this.txtMark.TabIndex = 18;
@@ -230,34 +329,12 @@
             // 
             this.lblMark.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMark.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMark.Location = new System.Drawing.Point(100, 331);
+            this.lblMark.Location = new System.Drawing.Point(100, 451);
             this.lblMark.Name = "lblMark";
             this.lblMark.Size = new System.Drawing.Size(100, 23);
             this.lblMark.TabIndex = 17;
             this.lblMark.Text = "Mark : ";
             this.lblMark.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdate.Location = new System.Drawing.Point(191, 383);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(63, 23);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelete.Location = new System.Drawing.Point(100, 383);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(63, 23);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // gv
             // 
@@ -266,82 +343,17 @@
             this.gv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv.Location = new System.Drawing.Point(477, 0);
             this.gv.Name = "gv";
-            this.gv.Size = new System.Drawing.Size(317, 429);
+            this.gv.Size = new System.Drawing.Size(317, 572);
             this.gv.TabIndex = 4;
             this.gv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CellClick);
-            // 
-            // btnCourse
-            // 
-            this.btnCourse.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourse.ForeColor = System.Drawing.Color.White;
-            this.btnCourse.Location = new System.Drawing.Point(369, 157);
-            this.btnCourse.Name = "btnCourse";
-            this.btnCourse.Size = new System.Drawing.Size(63, 23);
-            this.btnCourse.TabIndex = 33;
-            this.btnCourse.Text = "+ Add";
-            this.btnCourse.UseVisualStyleBackColor = false;
-            this.btnCourse.Click += new System.EventHandler(this.btnCourse_Click);
-            // 
-            // btnGrade
-            // 
-            this.btnGrade.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnGrade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade.ForeColor = System.Drawing.Color.White;
-            this.btnGrade.Location = new System.Drawing.Point(369, 200);
-            this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(63, 23);
-            this.btnGrade.TabIndex = 33;
-            this.btnGrade.Text = "+ Add";
-            this.btnGrade.UseVisualStyleBackColor = false;
-            this.btnGrade.Click += new System.EventHandler(this.btnGrade_Click);
-            // 
-            // btnAssType
-            // 
-            this.btnAssType.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAssType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAssType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAssType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAssType.ForeColor = System.Drawing.Color.White;
-            this.btnAssType.Location = new System.Drawing.Point(369, 244);
-            this.btnAssType.Name = "btnAssType";
-            this.btnAssType.Size = new System.Drawing.Size(63, 23);
-            this.btnAssType.TabIndex = 33;
-            this.btnAssType.Text = "+ Add";
-            this.btnAssType.UseVisualStyleBackColor = false;
-            this.btnAssType.Click += new System.EventHandler(this.btnAssType_Click);
-            // 
-            // lblId
-            // 
-            this.lblId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblId.Location = new System.Drawing.Point(100, 28);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(100, 23);
-            this.lblId.TabIndex = 31;
-            this.lblId.Text = "ID : ";
-            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtID.Location = new System.Drawing.Point(232, 28);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(121, 20);
-            this.txtID.TabIndex = 32;
             // 
             // frmAssessment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 429);
+            this.ClientSize = new System.Drawing.Size(794, 572);
             this.Controls.Add(this.gv);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAssessment";
             this.Text = "frmAssessment";
             this.Load += new System.EventHandler(this.frmAssessment_Load);
@@ -372,11 +384,12 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAssType;
         private System.Windows.Forms.Button btnGrade;
-        private System.Windows.Forms.Button btnCourse;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DataGridView gv;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblSearch;
     }
 }

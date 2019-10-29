@@ -33,6 +33,8 @@ namespace StudentFeedbackTracker_00171328
             db.AssessmentTypes.Add(at);
             db.SaveChanges();
 
+
+            this.Dispose();
             MessageBox.Show("Data Inserted Successfully ...");
         }
     }

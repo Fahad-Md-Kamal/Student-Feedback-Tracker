@@ -18,7 +18,6 @@ namespace StudentFeedbackTracker_00171328
         public Feedback()
         {
             this.Notes = new HashSet<Note>();
-            this.WordClouds = new HashSet<WordCloud>();
         }
     
         public int Id { get; set; }
@@ -31,7 +30,5 @@ namespace StudentFeedbackTracker_00171328
         public virtual FeedbackType FeedbackType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Note> Notes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WordCloud> WordClouds { get; set; }
     }
 }
