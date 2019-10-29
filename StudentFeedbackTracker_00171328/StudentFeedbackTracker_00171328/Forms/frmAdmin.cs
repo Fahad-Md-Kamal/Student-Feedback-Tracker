@@ -69,5 +69,7 @@ namespace StudentFeedbackTracker_00171328.Forms
         {
             Helper.PanelLoader(new frmNote(), pnlService);
         }
+
+
     }
 }

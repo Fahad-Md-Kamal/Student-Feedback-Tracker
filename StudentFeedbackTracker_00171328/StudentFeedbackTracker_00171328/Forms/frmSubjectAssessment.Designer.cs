@@ -147,6 +147,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "frmSubjectAssessment";
             this.Text = "frmSubjectAssessment";
+            this.Load += new System.EventHandler(this.frmSubjectAssessment_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();

@@ -41,6 +41,13 @@ namespace StudentFeedbackTracker_00171328
 
         private void frmAssessment_Load(object sender, EventArgs e)
         {
+
+            if (Tools.UserType == "STAFF")
+            {
+                btnAssType.Visible = false;
+            }
+
+
             var data = db.Courses.ToList();
 
             cboCourse.DataSource = data;
@@ -156,8 +163,7 @@ namespace StudentFeedbackTracker_00171328
             })
             .Where(x => 
                 x.Grade == txtSearch.Text || 
-                x.Title.ToLower()
-                .Contains(txtSearch.Text.ToLower()))
+                x.Title.ToLower().Contains(txtSearch.Text.ToLower()))
                 .ToList();
         }
 

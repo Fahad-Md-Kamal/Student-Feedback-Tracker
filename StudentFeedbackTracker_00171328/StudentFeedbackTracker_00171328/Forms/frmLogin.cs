@@ -31,9 +31,32 @@ namespace StudentFeedbackTracker_00171328
                 Tools.UserName = data.uName;
 
                 this.Hide();
-                frmAdmin frm = new frmAdmin();
-                frm.Text = "Welcome " + Tools.UserType;
-                frm.Show();
+
+                if (Tools.UserType == "ADMIN")
+                {
+                    frmAdmin frm = new frmAdmin
+                    {
+                        Text = "Welcome " + Tools.UserType
+                    };
+                    frm.Show();
+                }
+                else if (Tools.UserType == "STUDENT")
+                {
+                    frmStudent frm = new frmStudent
+                    {
+                        Text = "Welcome " + Tools.UserType
+                    };
+                    frm.Show();
+                }
+                else if(Tools.UserType == "STAFF")
+                {
+                    frmStaff frm = new frmStaff
+                    {
+                        Text = "Welcome " + Tools.UserType
+                    };
+                    frm.Show();
+                }
+
             }
             else
             {

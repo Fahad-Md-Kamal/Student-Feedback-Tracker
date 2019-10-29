@@ -60,5 +60,13 @@ namespace StudentFeedbackTracker_00171328
             frmSubject frm = new frmSubject();
             frm.Show();
         }
+
+        private void frmSubjectAssessment_Load(object sender, EventArgs e)
+        {
+            if (Tools.UserType == "STAFF")
+            {
+                btnSubAdd.Visible = false;
+            }
+        }
     }
 }
