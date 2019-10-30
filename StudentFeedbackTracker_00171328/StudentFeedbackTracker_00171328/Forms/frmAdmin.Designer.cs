@@ -131,6 +131,7 @@
             this.btnWordCloud.TabIndex = 0;
             this.btnWordCloud.Text = "WORD CLOUD";
             this.btnWordCloud.UseVisualStyleBackColor = true;
+            this.btnWordCloud.Click += new System.EventHandler(this.btnWordCloud_Click);
             // 
             // btnNote
             // 

@@ -157,8 +157,8 @@ CREATE TABLE [dbo].[Assessment] (
     CONSTRAINT [FK_Assessment_ToGrade] FOREIGN KEY ([gId]) REFERENCES [dbo].[Grade] ([Id])
 );
 
-INSERT INTO Assessment VALUES( 2, 83, 1, 1, 2, '2019/10/08', 'Cyber Security and Cryptography');
-INSERT INTO Assessment VALUES( 2, 70, 2, 2, 2, '2018/11/10', 'Pretty Perfect Shop');
+INSERT INTO Assessment VALUES( 2, 83, 1, 3, 2, '2019/10/08', 'Cyber Security and Cryptography');
+INSERT INTO Assessment VALUES( 2, 70, 2, 4, 2, '2018/11/10', 'Pretty Perfect Shop');
 
 
 

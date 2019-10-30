@@ -70,6 +70,9 @@ namespace StudentFeedbackTracker_00171328.Forms
             Helper.PanelLoader(new frmNote(), pnlService);
         }
 
-
+        private void btnWordCloud_Click(object sender, EventArgs e)
+        {
+            Helper.PanelLoader(new frmWordCloud(), pnlService);
+        }
     }
 }
