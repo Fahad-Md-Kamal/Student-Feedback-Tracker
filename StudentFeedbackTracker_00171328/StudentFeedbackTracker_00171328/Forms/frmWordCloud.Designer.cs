@@ -30,8 +30,11 @@
         {
             this.gv = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblCount = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.lblWord = new System.Windows.Forms.Label();
+            this.dtpStrtDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.btnSee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +53,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox1.Controls.Add(this.lblCount);
+            this.groupBox1.Controls.Add(this.btnSee);
+            this.groupBox1.Controls.Add(this.dtpEndDate);
+            this.groupBox1.Controls.Add(this.dtpStrtDate);
+            this.groupBox1.Controls.Add(this.lblEndDate);
             this.groupBox1.Controls.Add(this.lblWord);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -58,27 +64,56 @@
             this.groupBox1.Size = new System.Drawing.Size(319, 301);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Note Information";
+            this.groupBox1.Text = "Word Cloud";
             // 
-            // lblCount
+            // lblEndDate
             // 
-            this.lblCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCount.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(156, 98);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(139, 39);
-            this.lblCount.TabIndex = 27;
-            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEndDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEndDate.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.lblEndDate.Location = new System.Drawing.Point(18, 113);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(301, 39);
+            this.lblEndDate.TabIndex = 27;
+            this.lblEndDate.Text = "End Date";
+            this.lblEndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblWord
             // 
             this.lblWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblWord.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(6, 98);
+            this.lblWord.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold);
+            this.lblWord.Location = new System.Drawing.Point(18, 35);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(136, 39);
+            this.lblWord.Size = new System.Drawing.Size(301, 39);
             this.lblWord.TabIndex = 26;
+            this.lblWord.Text = "Start Date";
             this.lblWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpStrtDate
+            // 
+            this.dtpStrtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStrtDate.Location = new System.Drawing.Point(12, 77);
+            this.dtpStrtDate.Name = "dtpStrtDate";
+            this.dtpStrtDate.Size = new System.Drawing.Size(301, 22);
+            this.dtpStrtDate.TabIndex = 28;
+            // 
+            // dtpEndDate
+            // 
+            this.dtpEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndDate.Location = new System.Drawing.Point(12, 155);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(301, 22);
+            this.dtpEndDate.TabIndex = 29;
+            // 
+            // btnSee
+            // 
+            this.btnSee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSee.Location = new System.Drawing.Point(90, 220);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(137, 44);
+            this.btnSee.TabIndex = 30;
+            this.btnSee.Text = "See Cloud";
+            this.btnSee.UseVisualStyleBackColor = true;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // frmWordCloud
             // 
@@ -98,7 +133,10 @@
         #endregion
         private System.Windows.Forms.DataGridView gv;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblWord;
+        private System.Windows.Forms.Button btnSee;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.DateTimePicker dtpStrtDate;
     }
 }

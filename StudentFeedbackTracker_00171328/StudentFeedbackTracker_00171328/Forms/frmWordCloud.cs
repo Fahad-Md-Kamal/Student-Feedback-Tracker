@@ -21,14 +21,12 @@ namespace StudentFeedbackTracker_00171328
         public frmWordCloud()
         {
             InitializeComponent();
-            WordColud();
-
         }
 
 
         void WordColud()
         {
-            var feedbacks = db.Feedbacks.Select(d => d.Description).ToList();
+            var feedbacks = db.Feedbacks.Where(x => (x.Assessment.assDate >= dtpStrtDate.Value && x.Assessment.assDate <= dtpEndDate.Value)).Select(d => d.Description).ToList();
 
             foreach (var fdb in feedbacks.ToList())
             {
@@ -62,8 +60,14 @@ namespace StudentFeedbackTracker_00171328
 
                 DataGridViewRow row = gv.Rows[e.RowIndex];
                 lblWord.Text = row.Cells[0].Value.ToString().ToUpper();
-                lblCount.Text = row.Cells[1].Value.ToString().ToUpper();
+                lblEndDate.Text = row.Cells[1].Value.ToString().ToUpper();
             }
+        }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+
+            WordColud();
         }
     }
 }
