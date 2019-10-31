@@ -134,14 +134,6 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tName" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="WordCloud">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Word" Type="varchar" MaxLength="100" />
-          <Property Name="count" Type="int" />
-        </EntityType>
         <Association Name="FK_Assessment_ToAssess">
           <End Role="AssessmentType" Type="Self.AssessmentType" Multiplicity="0..1" />
           <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
@@ -361,7 +353,6 @@
           <EntitySet Name="SubjectAssessment" EntityType="Self.SubjectAssessment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WordCloud" EntityType="Self.WordCloud" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Assessment_ToAssess" Association="Self.FK_Assessment_ToAssess">
             <End Role="AssessmentType" EntitySet="AssessmentType" />
             <End Role="Assessment" EntitySet="Assessment" />
@@ -599,14 +590,6 @@
           <Property Name="tName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_ToUserType" FromRole="UserType" ToRole="User" />
         </EntityType>
-        <EntityType Name="WordCloud">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Word" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="count" Type="Int32" />
-        </EntityType>
         <Association Name="FK_Assessment_ToAssess">
           <End Role="AssessmentType" Type="Self.AssessmentType" Multiplicity="0..1" />
           <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
@@ -826,7 +809,6 @@
           <EntitySet Name="SubjectAssessments" EntityType="Self.SubjectAssessment" />
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="UserTypes" EntityType="Self.UserType" />
-          <EntitySet Name="WordClouds" EntityType="Self.WordCloud" />
           <AssociationSet Name="FK_Assessment_ToAssess" Association="Self.FK_Assessment_ToAssess">
             <End Role="AssessmentType" EntitySet="AssessmentTypes" />
             <End Role="Assessment" EntitySet="Assessments" />
@@ -1042,15 +1024,6 @@
               <MappingFragment StoreEntitySet="UserType">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="tName" ColumnName="tName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WordClouds">
-            <EntityTypeMapping TypeName="Database1Model.WordCloud">
-              <MappingFragment StoreEntitySet="WordCloud">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Word" ColumnName="Word" />
-                <ScalarProperty Name="count" ColumnName="count" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

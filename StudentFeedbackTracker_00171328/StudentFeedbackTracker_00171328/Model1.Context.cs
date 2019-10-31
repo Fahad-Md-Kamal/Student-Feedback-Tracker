@@ -39,6 +39,5 @@ namespace StudentFeedbackTracker_00171328
         public virtual DbSet<SubjectAssessment> SubjectAssessments { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserType> UserTypes { get; set; }
-        public virtual DbSet<WordCloud> WordClouds { get; set; }
     }
 }

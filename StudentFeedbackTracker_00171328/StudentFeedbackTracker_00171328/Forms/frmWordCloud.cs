@@ -51,6 +51,7 @@ namespace StudentFeedbackTracker_00171328
                 }
             }
             gv.DataSource = DictionaryList.ToList();
+            DictionaryList.Clear();
         }
 
         private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -66,7 +67,6 @@ namespace StudentFeedbackTracker_00171328
 
         private void btnSee_Click(object sender, EventArgs e)
         {
-
             WordColud();
         }
     }

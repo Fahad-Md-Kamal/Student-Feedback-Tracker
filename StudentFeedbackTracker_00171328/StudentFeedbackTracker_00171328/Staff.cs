@@ -15,7 +15,7 @@ namespace StudentFeedbackTracker_00171328
     public partial class Staff : Person
     {
         public Nullable<decimal> Salary { get; set; }
-
+    
         public virtual User User { get; set; }
     }
 }

@@ -204,12 +204,3 @@ INSERT INTO Note VALUES( '1', 'The point needs to be described considering a rea
 INSERT INTO Note VALUES( '2', 'Next semister will be started from the importance of regular practice for code', 5);
 
 
-CREATE TABLE [dbo].[WordCloud] (
-    [Id]          INT           IDENTITY (1, 1) NOT NULL,
-    [Word]       VARCHAR (100) NULL,
-    [count] int  NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC),
-);
-
-
-
